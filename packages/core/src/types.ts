@@ -1,4 +1,5 @@
 import { Readable } from "stream";
+import Snoowrap from "snoowrap";
 
 /**
  * Represents a UUID string in the format "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
@@ -603,7 +604,9 @@ export enum Clients {
     TWITTER = "twitter",
     TELEGRAM = "telegram",
     SLACK = "slack",
+    REDDIT = "reddit"
 }
+
 /**
  * Configuration for an agent character
  */
@@ -651,6 +654,8 @@ export type Character = {
         discordMessageHandlerTemplate?: string;
         slackMessageHandlerTemplate?: string;
         slackShouldRespondTemplate?: string;
+        redditMessageHandlerTemplate?: string;
+        redditShouldRespondTemplate?: string;
     };
 
     /** Character biography */
@@ -720,6 +725,13 @@ export type Character = {
             shouldIgnoreBotMessages?: boolean;
             shouldIgnoreDirectMessages?: boolean;
         };
+        // TODO: Add Reddit client config
+        reddit?: {
+            shouldIgnoreBotMessages: boolean;
+            shouldMonitorSubreddits: boolean;
+            allowedSubreddits: string[];
+        };
+        // TODO: Add Farcaster client config
     };
 
     /** Writing style guides */
@@ -1150,7 +1162,8 @@ export enum ServiceType {
     SPEECH_GENERATION = "speech_generation",
     PDF = "pdf",
     BUTTPLUG = "buttplug",
-    SLACK = "slack"
+    SLACK = "slack",
+    REDDIT = "reddit"
 }
 
 export enum LoggingLevel {
@@ -1166,4 +1179,11 @@ export type KnowledgeItem = {
 
 export interface ISlackService extends Service {
     client: any;
+}
+
+export interface IRedditService extends Service {
+    getCurrentUser(): Promise<unknown>;
+    getSubmission(id: string): Promise<unknown>;
+    getComments(id: string): Promise<unknown>;
+    replyToComment(id: string, text: string): Promise<unknown>;
 }
