@@ -1,0 +1,36 @@
+{
+    "name": "@ai16z/multiagents",
+    "version": "0.1.0",
+    "description": "Multi-agent support for Eliza",
+    "main": "dist/index.js",
+    "type": "module",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup --format esm --dts",
+        "lint": "eslint . --fix",
+        "watch": "tsc --watch",
+        "dev": "tsup --format esm --dts --watch",
+        "test": "vitest run",
+        "test:coverage": "vitest run --coverage",
+        "test:watch": "vitest"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@ai16z/eliza": "workspace:*",
+        "@types/better-sqlite3": "^7.6.9",
+        "@types/node": "^20.11.16",
+        "@types/pg": "8.11.10",
+        "@vitest/coverage-v8": "^1.2.2",
+        "@vitest/eslint-plugin": "^1.1.16",
+        "eslint-config-prettier": "^9.1.0",
+        "typescript": "^5.3.3",
+        "vitest": "^1.2.2"
+    },
+    "dependencies": {
+        "@ai16z/adapter-postgres": "0.1.5-alpha.5",
+        "@ai16z/eliza": "workspace:*",
+        "better-sqlite3": "^9.4.3",
+        "pg": "8.13.1"
+    }
+}
