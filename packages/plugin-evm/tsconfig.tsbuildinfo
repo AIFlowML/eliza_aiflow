@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/actions/bridge.ts","./src/actions/swap.ts","./src/actions/transfer.ts","./src/providers/wallet.ts","./src/templates/index.ts","./src/types/index.ts"],"version":"5.6.3"}

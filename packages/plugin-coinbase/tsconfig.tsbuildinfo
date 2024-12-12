@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/templates.ts","./src/types.ts","./src/utils.ts","./src/plugins/commerce.ts","./src/plugins/masspayments.ts","./src/plugins/tokencontract.ts","./src/plugins/trade.ts"],"errors":true,"version":"5.6.3"}

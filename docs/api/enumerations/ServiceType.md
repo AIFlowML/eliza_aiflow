@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / ServiceType
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / ServiceType
 
 # Enumeration: ServiceType
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1143](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1143)
+[packages/core/src/types.ts:1157](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1157)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1144](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1144)
+[packages/core/src/types.ts:1158](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1158)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1145](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1145)
+[packages/core/src/types.ts:1159](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1159)
 
 ***
 
@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1146](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1146)
+[packages/core/src/types.ts:1160](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1160)
 
 ***
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1147](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1147)
+[packages/core/src/types.ts:1161](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1161)
 
 ***
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1148](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1148)
+[packages/core/src/types.ts:1162](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1162)
 
 ***
 
@@ -70,7 +70,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1149](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1149)
+[packages/core/src/types.ts:1163](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1163)
 
 ***
 
@@ -80,4 +80,24 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1150](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1150)
+[packages/core/src/types.ts:1164](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1164)
+
+***
+
+### SLACK
+
+> **SLACK**: `"slack"`
+
+#### Defined in
+
+[packages/core/src/types.ts:1165](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1165)
+
+***
+
+### REDDIT
+
+> **REDDIT**: `"reddit"`
+
+#### Defined in
+
+[packages/core/src/types.ts:1166](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1166)

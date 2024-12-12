@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / IMemoryManager
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / IMemoryManager
 
 # Interface: IMemoryManager
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:910](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L910)
+[packages/core/src/types.ts:924](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L924)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:911](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L911)
+[packages/core/src/types.ts:925](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L925)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:912](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L912)
+[packages/core/src/types.ts:926](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L926)
 
 ## Methods
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:914](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L914)
+[packages/core/src/types.ts:928](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L928)
 
 ***
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:916](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L916)
+[packages/core/src/types.ts:930](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L930)
 
 ***
 
@@ -94,7 +94,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:924](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L924)
+[packages/core/src/types.ts:938](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L938)
 
 ***
 
@@ -112,7 +112,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:928](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L928)
+[packages/core/src/types.ts:942](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L942)
 
 ***
 
@@ -132,7 +132,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:929](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L929)
+[packages/core/src/types.ts:943](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L943)
 
 ***
 
@@ -160,7 +160,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:930](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L930)
+[packages/core/src/types.ts:944](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L944)
 
 ***
 
@@ -180,7 +180,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:940](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L940)
+[packages/core/src/types.ts:954](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L954)
 
 ***
 
@@ -198,7 +198,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:942](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L942)
+[packages/core/src/types.ts:956](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L956)
 
 ***
 
@@ -216,7 +216,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:944](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L944)
+[packages/core/src/types.ts:958](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L958)
 
 ***
 
@@ -236,4 +236,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:946](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L946)
+[packages/core/src/types.ts:960](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L960)

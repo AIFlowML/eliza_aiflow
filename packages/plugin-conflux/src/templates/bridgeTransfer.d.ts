@@ -1,0 +1,1 @@
+export declare const confluxBridgeTransferTemplate = "\nExtract Conflux Cross Space Transfer Parameters from the latest message:\n\n{{recentMessages}}\n\nThe to address should be the Conflux eSpace address, starting with \"0x\".\n";

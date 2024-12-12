@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / ISpeechService
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / ISpeechService
 
 # Interface: ISpeechService
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:973](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L973)
+[packages/core/src/types.ts:987](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L987)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:978](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L978)
+[packages/core/src/types.ts:992](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L992)
 
 ***
 
@@ -62,7 +62,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1116](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1116)
+[packages/core/src/types.ts:1130](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1130)
 
 ***
 
@@ -82,4 +82,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1117](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1117)
+[packages/core/src/types.ts:1131](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1131)

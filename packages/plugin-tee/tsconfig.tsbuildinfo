@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/providers/derivekeyprovider.ts","./src/providers/remoteattestationprovider.ts","./src/providers/walletprovider.ts","./src/types/tee.ts"],"version":"5.6.3"}

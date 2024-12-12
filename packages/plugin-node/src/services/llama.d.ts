@@ -1,0 +1,35 @@
+import { IAgentRuntime, ServiceType } from "@ai16z/eliza";
+import { Service } from "@ai16z/eliza";
+export declare class LlamaService extends Service {
+    private llama;
+    private model;
+    private modelPath;
+    private grammar;
+    private ctx;
+    private sequence;
+    private modelUrl;
+    private ollamaModel;
+    private messageQueue;
+    private isProcessing;
+    private modelInitialized;
+    private runtime;
+    static serviceType: ServiceType;
+    constructor();
+    initialize(runtime: IAgentRuntime): Promise<void>;
+    private ensureInitialized;
+    initializeModel(): Promise<void>;
+    checkModel(): Promise<void>;
+    deleteModel(): Promise<void>;
+    queueMessageCompletion(context: string, temperature: number, stop: string[], frequency_penalty: number, presence_penalty: number, max_tokens: number): Promise<any>;
+    queueTextCompletion(context: string, temperature: number, stop: string[], frequency_penalty: number, presence_penalty: number, max_tokens: number): Promise<string>;
+    private processQueue;
+    completion(prompt: string, runtime: IAgentRuntime): Promise<string>;
+    embedding(text: string, runtime: IAgentRuntime): Promise<number[]>;
+    private getCompletionResponse;
+    getEmbeddingResponse(input: string): Promise<number[] | undefined>;
+    private ollamaCompletion;
+    private ollamaEmbedding;
+    private localCompletion;
+    private localEmbedding;
+}
+export default LlamaService;

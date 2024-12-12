@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / IDatabaseCacheAdapter
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / IDatabaseCacheAdapter
 
 # Interface: IDatabaseCacheAdapter
 
@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:895](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L895)
+[packages/core/src/types.ts:909](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L909)
 
 ***
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:900](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L900)
+[packages/core/src/types.ts:914](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L914)
 
 ***
 
@@ -68,4 +68,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:906](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L906)
+[packages/core/src/types.ts:920](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L920)

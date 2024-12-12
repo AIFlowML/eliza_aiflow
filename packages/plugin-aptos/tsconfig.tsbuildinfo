@@ -1,0 +1,1 @@
+{"root":["./src/constants.ts","./src/enviroment.ts","./src/index.ts","./src/actions/transfer.ts","./src/providers/wallet.ts","./src/tests/wallet.test.ts"],"version":"5.6.3"}

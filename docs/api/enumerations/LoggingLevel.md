@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / LoggingLevel
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / LoggingLevel
 
 # Enumeration: LoggingLevel
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1154](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1154)
+[packages/core/src/types.ts:1170](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1170)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1155](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1155)
+[packages/core/src/types.ts:1171](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1171)
 
 ***
 
@@ -30,4 +30,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1156](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1156)
+[packages/core/src/types.ts:1172](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1172)

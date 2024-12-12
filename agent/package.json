@@ -6,7 +6,8 @@
     "scripts": {
         "start": "node --loader ts-node/esm src/index.ts",
         "dev": "node --loader ts-node/esm src/index.ts",
-        "check-types": "tsc --noEmit"
+        "check-types": "tsc --noEmit",
+        "build": "tsc -p tsconfig.json"
     },
     "nodemonConfig": {
         "watch": [
@@ -25,6 +26,7 @@
         "@ai16z/client-telegram": "workspace:*",
         "@ai16z/client-twitter": "workspace:*",
         "@ai16z/client-slack": "workspace:*",
+        "@ai16z/client-reddit": "workspace:*",
         "@ai16z/eliza": "workspace:*",
         "@ai16z/plugin-0g": "workspace:*",
         "@ai16z/plugin-aptos": "workspace:*",

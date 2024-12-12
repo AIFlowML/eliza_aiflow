@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / ConversationExample
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / ConversationExample
 
 # Interface: ConversationExample
 
@@ -14,7 +14,7 @@ UUID of user in conversation
 
 #### Defined in
 
-[packages/core/src/types.ts:50](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L50)
+[packages/core/src/types.ts:51](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L51)
 
 ***
 
@@ -26,4 +26,4 @@ Content of the conversation
 
 #### Defined in
 
-[packages/core/src/types.ts:53](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L53)
+[packages/core/src/types.ts:54](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L54)

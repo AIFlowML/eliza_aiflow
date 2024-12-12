@@ -1,0 +1,10 @@
+import { Connection, Keypair, PublicKey, VersionedTransaction } from "@solana/web3.js";
+export declare function delayedCall<T>(method: (...args: any[]) => Promise<T>, ...args: any[]): Promise<T>;
+export declare function getTokenDecimals(connection: Connection, mintAddress: string): Promise<number>;
+export declare function getQuote(connection: Connection, baseToken: string, outputToken: string, amount: number): Promise<any>;
+export declare const executeSwap: (transaction: VersionedTransaction, type: "buy" | "sell") => Promise<string | undefined>;
+export declare const Sell: (baseMint: PublicKey, wallet: Keypair) => Promise<string | null | undefined>;
+export declare const Buy: (baseMint: PublicKey, wallet: Keypair) => Promise<string | null | undefined>;
+export declare const getSwapTxWithWithJupiter: (wallet: Keypair, baseMint: PublicKey, amount: string, type: "buy" | "sell") => Promise<VersionedTransaction | null | undefined>;
+export declare const fetchBuyTransaction: (wallet: Keypair, baseMint: PublicKey, amount: string) => Promise<VersionedTransaction | null>;
+export declare const fetchSellTransaction: (wallet: Keypair, baseMint: PublicKey, amount: string) => Promise<VersionedTransaction | null>;

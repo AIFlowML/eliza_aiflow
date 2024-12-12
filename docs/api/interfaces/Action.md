@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Action
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Action
 
 # Interface: Action
 
@@ -14,7 +14,7 @@ Similar action descriptions
 
 #### Defined in
 
-[packages/core/src/types.ts:394](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L394)
+[packages/core/src/types.ts:397](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L397)
 
 ***
 
@@ -26,7 +26,7 @@ Detailed description
 
 #### Defined in
 
-[packages/core/src/types.ts:397](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L397)
+[packages/core/src/types.ts:400](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L400)
 
 ***
 
@@ -38,7 +38,7 @@ Example usages
 
 #### Defined in
 
-[packages/core/src/types.ts:400](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L400)
+[packages/core/src/types.ts:403](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L403)
 
 ***
 
@@ -50,7 +50,7 @@ Handler function
 
 #### Defined in
 
-[packages/core/src/types.ts:403](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L403)
+[packages/core/src/types.ts:406](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L406)
 
 ***
 
@@ -62,7 +62,7 @@ Action name
 
 #### Defined in
 
-[packages/core/src/types.ts:406](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L406)
+[packages/core/src/types.ts:409](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L409)
 
 ***
 
@@ -74,4 +74,4 @@ Validation function
 
 #### Defined in
 
-[packages/core/src/types.ts:409](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L409)
+[packages/core/src/types.ts:412](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L412)

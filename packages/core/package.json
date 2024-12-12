@@ -73,6 +73,7 @@
         "together-ai": "0.7.0",
         "unique-names-generator": "4.7.1",
         "uuid": "11.0.3",
-        "zod": "3.23.8"
+        "zod": "3.23.8",
+        "snoowrap": "^1.23.0"
     }
 }

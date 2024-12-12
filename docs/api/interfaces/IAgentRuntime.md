@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / IAgentRuntime
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / IAgentRuntime
 
 # Interface: IAgentRuntime
 
@@ -12,7 +12,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:983](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L983)
+[packages/core/src/types.ts:997](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L997)
 
 ***
 
@@ -22,7 +22,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:984](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L984)
+[packages/core/src/types.ts:998](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L998)
 
 ***
 
@@ -32,7 +32,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:985](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L985)
+[packages/core/src/types.ts:999](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L999)
 
 ***
 
@@ -42,7 +42,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:986](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L986)
+[packages/core/src/types.ts:1000](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1000)
 
 ***
 
@@ -52,7 +52,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:987](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L987)
+[packages/core/src/types.ts:1001](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1001)
 
 ***
 
@@ -62,7 +62,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:988](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L988)
+[packages/core/src/types.ts:1002](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1002)
 
 ***
 
@@ -72,7 +72,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:989](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L989)
+[packages/core/src/types.ts:1003](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1003)
 
 ***
 
@@ -82,7 +82,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:990](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L990)
+[packages/core/src/types.ts:1004](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1004)
 
 ***
 
@@ -92,7 +92,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:991](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L991)
+[packages/core/src/types.ts:1005](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1005)
 
 ***
 
@@ -102,7 +102,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:992](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L992)
+[packages/core/src/types.ts:1006](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1006)
 
 ***
 
@@ -112,7 +112,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:993](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L993)
+[packages/core/src/types.ts:1007](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1007)
 
 ***
 
@@ -122,7 +122,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:995](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L995)
+[packages/core/src/types.ts:1009](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1009)
 
 ***
 
@@ -132,7 +132,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:996](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L996)
+[packages/core/src/types.ts:1010](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1010)
 
 ***
 
@@ -142,7 +142,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:997](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L997)
+[packages/core/src/types.ts:1011](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1011)
 
 ***
 
@@ -152,7 +152,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:998](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L998)
+[packages/core/src/types.ts:1012](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1012)
 
 ***
 
@@ -162,7 +162,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:999](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L999)
+[packages/core/src/types.ts:1013](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1013)
 
 ***
 
@@ -172,7 +172,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1001](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1001)
+[packages/core/src/types.ts:1015](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1015)
 
 ***
 
@@ -182,7 +182,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1003](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1003)
+[packages/core/src/types.ts:1017](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1017)
 
 ## Methods
 
@@ -196,7 +196,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1005](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1005)
+[packages/core/src/types.ts:1019](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1019)
 
 ***
 
@@ -214,7 +214,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1007](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1007)
+[packages/core/src/types.ts:1021](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1021)
 
 ***
 
@@ -232,7 +232,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1009](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1009)
+[packages/core/src/types.ts:1023](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1023)
 
 ***
 
@@ -254,7 +254,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1011](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1011)
+[packages/core/src/types.ts:1025](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1025)
 
 ***
 
@@ -272,7 +272,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1013](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1013)
+[packages/core/src/types.ts:1027](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1027)
 
 ***
 
@@ -290,7 +290,7 @@ Properties
 
 #### Defined in
 
-[packages/core/src/types.ts:1015](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1015)
+[packages/core/src/types.ts:1029](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1029)
 
 ***
 
@@ -306,7 +306,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1018](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1018)
+[packages/core/src/types.ts:1032](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1032)
 
 ***
 
@@ -330,7 +330,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1020](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1020)
+[packages/core/src/types.ts:1034](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1034)
 
 ***
 
@@ -352,7 +352,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1027](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1027)
+[packages/core/src/types.ts:1041](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1041)
 
 ***
 
@@ -372,7 +372,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1033](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1033)
+[packages/core/src/types.ts:1047](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1047)
 
 ***
 
@@ -396,7 +396,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1035](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1035)
+[packages/core/src/types.ts:1049](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1049)
 
 ***
 
@@ -414,7 +414,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1042](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1042)
+[packages/core/src/types.ts:1056](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1056)
 
 ***
 
@@ -440,7 +440,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1044](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1044)
+[packages/core/src/types.ts:1058](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1058)
 
 ***
 
@@ -460,7 +460,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1052](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1052)
+[packages/core/src/types.ts:1066](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1066)
 
 ***
 
@@ -478,7 +478,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1054](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1054)
+[packages/core/src/types.ts:1068](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1068)
 
 ***
 
@@ -498,7 +498,7 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1056](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1056)
+[packages/core/src/types.ts:1070](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1070)
 
 ***
 
@@ -516,4 +516,4 @@ Methods
 
 #### Defined in
 
-[packages/core/src/types.ts:1061](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1061)
+[packages/core/src/types.ts:1075](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1075)

@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / ITextGenerationService
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / ITextGenerationService
 
 # Interface: ITextGenerationService
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:973](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L973)
+[packages/core/src/types.ts:987](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L987)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:978](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L978)
+[packages/core/src/types.ts:992](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L992)
 
 ***
 
@@ -62,7 +62,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1087](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1087)
+[packages/core/src/types.ts:1101](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1101)
 
 ***
 
@@ -90,7 +90,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1088](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1088)
+[packages/core/src/types.ts:1102](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1102)
 
 ***
 
@@ -118,7 +118,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1096](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1096)
+[packages/core/src/types.ts:1110](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1110)
 
 ***
 
@@ -136,4 +136,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1104](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1104)
+[packages/core/src/types.ts:1118](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1118)

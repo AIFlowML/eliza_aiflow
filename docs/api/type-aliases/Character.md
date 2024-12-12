@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Character
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Character
 
 # Type Alias: Character
 
@@ -135,6 +135,14 @@ Optional prompt templates
 ### templates.slackShouldRespondTemplate?
 
 > `optional` **slackShouldRespondTemplate**: `string`
+
+### templates.redditMessageHandlerTemplate?
+
+> `optional` **redditMessageHandlerTemplate**: `string`
+
+### templates.redditShouldRespondTemplate?
+
+> `optional` **redditShouldRespondTemplate**: `string`
 
 ### bio
 
@@ -316,6 +324,24 @@ Optional client-specific config
 
 > `optional` **shouldIgnoreDirectMessages**: `boolean`
 
+### clientConfig.reddit?
+
+> `optional` **reddit**: `object`
+
+TODO: Add Reddit client config
+
+### clientConfig.reddit.shouldIgnoreBotMessages
+
+> **shouldIgnoreBotMessages**: `boolean`
+
+### clientConfig.reddit.shouldMonitorSubreddits
+
+> **shouldMonitorSubreddits**: `boolean`
+
+### clientConfig.reddit.allowedSubreddits
+
+> **allowedSubreddits**: `string`[]
+
 ### style
 
 > **style**: `object`
@@ -362,4 +388,4 @@ Optional Twitter profile
 
 ## Defined in
 
-[packages/core/src/types.ts:608](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L608)
+[packages/core/src/types.ts:613](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L613)

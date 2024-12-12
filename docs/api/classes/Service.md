@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Service
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Service
 
 # Class: `abstract` Service
 
@@ -11,6 +11,8 @@
 - [`IBrowserService`](../interfaces/IBrowserService.md)
 - [`ISpeechService`](../interfaces/ISpeechService.md)
 - [`IPdfService`](../interfaces/IPdfService.md)
+- [`ISlackService`](../interfaces/ISlackService.md)
+- [`IRedditService`](../interfaces/IRedditService.md)
 
 ## Constructors
 
@@ -36,7 +38,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:962](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L962)
+[packages/core/src/types.ts:976](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L976)
 
 ***
 
@@ -52,7 +54,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:973](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L973)
+[packages/core/src/types.ts:987](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L987)
 
 ## Methods
 
@@ -70,7 +72,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:966](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L966)
+[packages/core/src/types.ts:980](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L980)
 
 ***
 
@@ -90,4 +92,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:978](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L978)
+[packages/core/src/types.ts:992](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L992)

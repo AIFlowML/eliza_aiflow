@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / IDatabaseAdapter
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / IDatabaseAdapter
 
 # Interface: IDatabaseAdapter
 
@@ -14,7 +14,7 @@ Database instance
 
 #### Defined in
 
-[packages/core/src/types.ts:745](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L745)
+[packages/core/src/types.ts:759](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L759)
 
 ## Methods
 
@@ -30,7 +30,7 @@ Optional initialization
 
 #### Defined in
 
-[packages/core/src/types.ts:748](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L748)
+[packages/core/src/types.ts:762](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L762)
 
 ***
 
@@ -46,7 +46,7 @@ Close database connection
 
 #### Defined in
 
-[packages/core/src/types.ts:751](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L751)
+[packages/core/src/types.ts:765](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L765)
 
 ***
 
@@ -66,7 +66,7 @@ Get account by ID
 
 #### Defined in
 
-[packages/core/src/types.ts:754](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L754)
+[packages/core/src/types.ts:768](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L768)
 
 ***
 
@@ -86,7 +86,7 @@ Create new account
 
 #### Defined in
 
-[packages/core/src/types.ts:757](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L757)
+[packages/core/src/types.ts:771](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L771)
 
 ***
 
@@ -120,7 +120,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:760](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L760)
+[packages/core/src/types.ts:774](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L774)
 
 ***
 
@@ -138,7 +138,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:770](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L770)
+[packages/core/src/types.ts:784](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L784)
 
 ***
 
@@ -162,7 +162,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:772](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L772)
+[packages/core/src/types.ts:786](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L786)
 
 ***
 
@@ -192,7 +192,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:778](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L778)
+[packages/core/src/types.ts:792](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L792)
 
 ***
 
@@ -218,7 +218,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:787](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L787)
+[packages/core/src/types.ts:801](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L801)
 
 ***
 
@@ -238,7 +238,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:794](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L794)
+[packages/core/src/types.ts:808](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L808)
 
 ***
 
@@ -270,7 +270,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:796](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L796)
+[packages/core/src/types.ts:810](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L810)
 
 ***
 
@@ -292,7 +292,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:806](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L806)
+[packages/core/src/types.ts:820](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L820)
 
 ***
 
@@ -324,7 +324,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:811](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L811)
+[packages/core/src/types.ts:825](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L825)
 
 ***
 
@@ -346,7 +346,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:823](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L823)
+[packages/core/src/types.ts:837](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L837)
 
 ***
 
@@ -366,7 +366,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:829](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L829)
+[packages/core/src/types.ts:843](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L843)
 
 ***
 
@@ -386,7 +386,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:831](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L831)
+[packages/core/src/types.ts:845](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L845)
 
 ***
 
@@ -408,7 +408,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:833](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L833)
+[packages/core/src/types.ts:847](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L847)
 
 ***
 
@@ -436,7 +436,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:839](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L839)
+[packages/core/src/types.ts:853](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L853)
 
 ***
 
@@ -454,7 +454,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:847](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L847)
+[packages/core/src/types.ts:861](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L861)
 
 ***
 
@@ -472,7 +472,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:849](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L849)
+[packages/core/src/types.ts:863](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L863)
 
 ***
 
@@ -490,7 +490,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:851](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L851)
+[packages/core/src/types.ts:865](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L865)
 
 ***
 
@@ -508,7 +508,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:853](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L853)
+[packages/core/src/types.ts:867](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L867)
 
 ***
 
@@ -526,7 +526,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:855](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L855)
+[packages/core/src/types.ts:869](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L869)
 
 ***
 
@@ -544,7 +544,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:857](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L857)
+[packages/core/src/types.ts:871](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L871)
 
 ***
 
@@ -562,7 +562,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:859](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L859)
+[packages/core/src/types.ts:873](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L873)
 
 ***
 
@@ -580,7 +580,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:861](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L861)
+[packages/core/src/types.ts:875](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L875)
 
 ***
 
@@ -598,7 +598,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:863](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L863)
+[packages/core/src/types.ts:877](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L877)
 
 ***
 
@@ -618,7 +618,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:865](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L865)
+[packages/core/src/types.ts:879](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L879)
 
 ***
 
@@ -638,7 +638,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:867](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L867)
+[packages/core/src/types.ts:881](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L881)
 
 ***
 
@@ -656,7 +656,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:869](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L869)
+[packages/core/src/types.ts:883](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L883)
 
 ***
 
@@ -674,7 +674,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:871](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L871)
+[packages/core/src/types.ts:885](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L885)
 
 ***
 
@@ -694,7 +694,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:873](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L873)
+[packages/core/src/types.ts:887](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L887)
 
 ***
 
@@ -716,7 +716,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:878](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L878)
+[packages/core/src/types.ts:892](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L892)
 
 ***
 
@@ -738,7 +738,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:884](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L884)
+[packages/core/src/types.ts:898](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L898)
 
 ***
 
@@ -760,7 +760,7 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:886](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L886)
+[packages/core/src/types.ts:900](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L900)
 
 ***
 
@@ -780,4 +780,4 @@ Get memories matching criteria
 
 #### Defined in
 
-[packages/core/src/types.ts:891](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L891)
+[packages/core/src/types.ts:905](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L905)

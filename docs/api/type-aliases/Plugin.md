@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Plugin
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Plugin
 
 # Type Alias: Plugin
 
@@ -52,4 +52,4 @@ Optional clients
 
 ## Defined in
 
-[packages/core/src/types.ts:572](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L572)
+[packages/core/src/types.ts:575](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L575)

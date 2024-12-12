@@ -1,0 +1,44 @@
+import { IAgentRuntime } from "@ai16z/eliza";
+import { z } from "zod";
+export declare const nodeEnvSchema: z.ZodObject<{
+    OPENAI_API_KEY: z.ZodString;
+    ELEVENLABS_XI_API_KEY: z.ZodOptional<z.ZodString>;
+    ELEVENLABS_MODEL_ID: z.ZodOptional<z.ZodString>;
+    ELEVENLABS_VOICE_ID: z.ZodOptional<z.ZodString>;
+    ELEVENLABS_VOICE_STABILITY: z.ZodOptional<z.ZodString>;
+    ELEVENLABS_VOICE_SIMILARITY_BOOST: z.ZodOptional<z.ZodString>;
+    ELEVENLABS_VOICE_STYLE: z.ZodOptional<z.ZodString>;
+    ELEVENLABS_VOICE_USE_SPEAKER_BOOST: z.ZodOptional<z.ZodString>;
+    ELEVENLABS_OPTIMIZE_STREAMING_LATENCY: z.ZodOptional<z.ZodString>;
+    ELEVENLABS_OUTPUT_FORMAT: z.ZodOptional<z.ZodString>;
+    VITS_VOICE: z.ZodOptional<z.ZodString>;
+    VITS_MODEL: z.ZodOptional<z.ZodString>;
+}, "strip", z.ZodTypeAny, {
+    OPENAI_API_KEY: string;
+    ELEVENLABS_XI_API_KEY?: string | undefined;
+    ELEVENLABS_MODEL_ID?: string | undefined;
+    ELEVENLABS_VOICE_ID?: string | undefined;
+    ELEVENLABS_VOICE_STABILITY?: string | undefined;
+    ELEVENLABS_VOICE_SIMILARITY_BOOST?: string | undefined;
+    ELEVENLABS_VOICE_STYLE?: string | undefined;
+    ELEVENLABS_VOICE_USE_SPEAKER_BOOST?: string | undefined;
+    ELEVENLABS_OPTIMIZE_STREAMING_LATENCY?: string | undefined;
+    ELEVENLABS_OUTPUT_FORMAT?: string | undefined;
+    VITS_VOICE?: string | undefined;
+    VITS_MODEL?: string | undefined;
+}, {
+    OPENAI_API_KEY: string;
+    ELEVENLABS_XI_API_KEY?: string | undefined;
+    ELEVENLABS_MODEL_ID?: string | undefined;
+    ELEVENLABS_VOICE_ID?: string | undefined;
+    ELEVENLABS_VOICE_STABILITY?: string | undefined;
+    ELEVENLABS_VOICE_SIMILARITY_BOOST?: string | undefined;
+    ELEVENLABS_VOICE_STYLE?: string | undefined;
+    ELEVENLABS_VOICE_USE_SPEAKER_BOOST?: string | undefined;
+    ELEVENLABS_OPTIMIZE_STREAMING_LATENCY?: string | undefined;
+    ELEVENLABS_OUTPUT_FORMAT?: string | undefined;
+    VITS_VOICE?: string | undefined;
+    VITS_MODEL?: string | undefined;
+}>;
+export type NodeConfig = z.infer<typeof nodeEnvSchema>;
+export declare function validateNodeConfig(runtime: IAgentRuntime): Promise<NodeConfig>;

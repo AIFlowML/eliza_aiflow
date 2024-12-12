@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / HandlerCallback
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / HandlerCallback
 
 # Type Alias: HandlerCallback()
 
@@ -18,4 +18,4 @@ Callback function type for handlers
 
 ## Defined in
 
-[packages/core/src/types.ts:375](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L375)
+[packages/core/src/types.ts:378](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L378)

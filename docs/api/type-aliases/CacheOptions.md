@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / CacheOptions
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / CacheOptions
 
 # Type Alias: CacheOptions
 
@@ -12,4 +12,4 @@
 
 ## Defined in
 
-[packages/core/src/types.ts:949](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L949)
+[packages/core/src/types.ts:963](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L963)

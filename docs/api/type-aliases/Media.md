@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Media
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Media
 
 # Type Alias: Media
 
@@ -46,4 +46,4 @@ Text content
 
 ## Defined in
 
-[packages/core/src/types.ts:538](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L538)
+[packages/core/src/types.ts:541](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L541)

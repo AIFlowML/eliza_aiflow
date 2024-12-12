@@ -1,0 +1,729 @@
+{
+    "name": "Eliza AI Flow",
+    "root": "/Users/ilessio/dev-agents/gaia_local/eliza_aiflow",
+    "environment": {
+        "type": "conda",
+        "name": "eve-app",
+        "dependencies": {
+            "python": ">=3.9",
+            "packages": [
+                "phi-framework",
+                "PyGithub",
+                "tavily-python",
+                "beautifulsoup4",
+                "requests",
+                "psutil",
+                "radon",
+                "pylint",
+                "esprima",
+                "pyright",
+                "bandit"
+            ]
+        }
+    },
+    "llm": {
+        "model": "gpt-40",
+        "temperature": 0.2,
+        "tools": [
+            {
+                "name": "github_llm",
+                "path": "tools/github_llm.py",
+                "description": "GitHub integration tool for repository management and automation",
+                "test_file": "tools/test_github_llm.py",
+                "usage": "from tools.github_llm import GithubLLM; github = GithubLLM()",
+                "command": "conda activate eve-app && PYTHONPATH=/Users/ilessio/dev-agents/gaia_local/eliza_aiflow python tools/test_github_llm.py",
+                "examples": [
+                    "# Check repository information",
+                    "python tools/test_github_llm.py",
+                    "# This will show repository details, issues, and recent activity"
+                ]
+            },
+            {
+                "name": "web_search",
+                "path": "tools/web_researcher_sync.py",
+                "description": "Web search and research tool for gathering information",
+                "test_file": "tools/test_web_research.py",
+                "usage": "from tools.web_researcher_sync import WebResearcherSync; researcher = WebResearcherSync()",
+                "command": "conda activate eve-app && PYTHONPATH=/Users/ilessio/dev-agents/gaia_local/eliza_aiflow python tools/test_web_research.py",
+                "examples": [
+                    "# Search with specific query and number of results",
+                    "python tools/test_web_research.py \"Next.js App Router best practices 2024\" 5",
+                    "# Search with default number of results (3)",
+                    "python tools/test_web_research.py \"Python async await examples\""
+                ]
+            },
+            {
+                "name": "code_analyzer",
+                "path": "tools/code_analyzer.py",
+                "description": "Multi-language code analysis tool for Python, TypeScript, and JavaScript",
+                "test_file": "tools/test_code_analyzer.py",
+                "usage": "from tools.code_analyzer import CodeAnalyzer; analyzer = CodeAnalyzer()",
+                "command": "conda activate eve-app && PYTHONPATH=/Users/ilessio/dev-agents/gaia_local/eliza_aiflow python tools/test_code_analyzer.py",
+                "examples": [
+                    "# Analyze specific files",
+                    "python tools/test_code_analyzer.py",
+                    "# This will analyze both Python and TypeScript/JavaScript files"
+                ]
+            },
+            {
+                "name": "monitor",
+                "path": "tools/Monitor.py",
+                "description": "System monitoring and performance tracking",
+                "test_file": "tools/test_monitor.py",
+                "usage": "from tools.Monitor import Monitor; monitor = Monitor()",
+                "command": "conda activate eve-app && PYTHONPATH=/Users/ilessio/dev-agents/gaia_local/eliza_aiflow python tools/test_monitor.py",
+                "examples": [
+                    "# Monitor system resources",
+                    "python tools/test_monitor.py",
+                    "# This will show CPU, memory, disk usage, and system information"
+                ]
+            }
+        ],
+        "documentationPrompts": {
+            "frameworkReference": "Before implementing framework-specific features or solving framework-related issues, check the local documentation files in the following order:\n1. eliza_data_flow.md for system architecture\n2. eliza_core.md for core components\n3. agent.md for agent-specific details\n4. client_interface.md for UI components\n5. eliza_guide_llm.md for implementation examples",
+            "projectStatus": "Always check and update project_status.md when:\n1. Adding new features or components\n2. Completing development milestones\n3. Making architectural decisions\n4. Integrating new dependencies\n5. Fixing major issues",
+            "documentationUsage": "When encountering framework-specific challenges:\n1. First, search local documentation\n2. Reference provided examples\n3. Check implementation patterns\n4. Review best practices\n5. Follow established conventions"
+        }
+    },
+    "language": {
+        "typescript": {
+            "formatter": "prettier",
+            "linter": "eslint",
+            "compilerOptions": {
+                "strict": true,
+                "target": "ES2022",
+                "module": "ESNext",
+                "jsx": "preserve",
+                "moduleResolution": "node",
+                "allowJs": true,
+                "esModuleInterop": true,
+                "skipLibCheck": true,
+                "forceConsistentCasingInFileNames": true
+            }
+        }
+    },
+    "frameworks": ["next", "react", "shadcn", "radix-ui", "tailwind"],
+    "packageManager": "pnpm",
+    "importantDirectories": {
+        "agent": "/agent",
+        "client": "/client",
+        "characters": "/characters",
+        "localDocs": "/local_docs",
+        "tools": "/tools"
+    },
+    "environmentFile": ".env",
+    "documentation": {
+        "main": "README.md",
+        "api": "local_docs/eliza_doc.txt",
+        "framework": {
+            "agent": "local_docs/agent.md",
+            "client": "local_docs/client_interface.md",
+            "core": "local_docs/eliza_core.md",
+            "dataFlow": "local_docs/eliza_data_flow.md",
+            "guide": "local_docs/eliza_guide_llm.md",
+            "apiDocs": "local_docs/eliza_doc_small.txt"
+        },
+        "project": {
+            "status": "local_docs/project/project_status.md",
+            "updateRules": [
+                "Update status file when adding new features",
+                "Track progress on existing features",
+                "Document completed milestones",
+                "Record technical decisions",
+                "Track dependencies and integrations"
+            ]
+        }
+    },
+    "git": {
+        "repository": "https://github.com/AIFlowML/eliza_aiflow",
+        "branch": "gaia-hackathon",
+        "configuration": {
+            "remotes": {
+                "origin": {
+                    "url": "git@github.com:AIFlowML/eliza_aiflow.git",
+                    "purpose": "Public fork for submitting PRs",
+                    "branch": "gaia-hackathon"
+                },
+                "private": {
+                    "url": "git@github.com:AIFlowML/gaia_hack_grant.git",
+                    "purpose": "Private repository for development",
+                    "branch": "main"
+                },
+                "upstream": {
+                    "url": "git@github.com:ai16z/eliza.git",
+                    "purpose": "Original repository",
+                    "branch": "main"
+                }
+            },
+            "setup_commands": {
+                "verify_remotes": "git remote -v",
+                "add_private_remote": "git remote add private git@github.com:AIFlowML/gaia_hack_grant.git",
+                "add_upstream_remote": "git remote add upstream git@github.com:ai16z/eliza.git",
+                "push_to_private": {
+                    "all_branches": "git push --all private",
+                    "specific_branch": "git push private <branch-name>",
+                    "set_upstream": "git push -u private main"
+                },
+                "push_to_fork": {
+                    "all_branches": "git push --all origin",
+                    "specific_branch": "git push origin <branch-name>",
+                    "set_upstream": "git push -u origin gaia-hackathon"
+                }
+            },
+            "workflow": {
+                "sync_upstream": {
+                    "fetch": "git fetch upstream",
+                    "merge": "git merge upstream/main"
+                },
+                "development": {
+                    "new_feature": {
+                        "create_branch": "git checkout -b feature/<name>",
+                        "push_private": "git push private feature/<name>",
+                        "push_fork_pr": "git push origin feature/<name>"
+                    },
+                    "update_branches": {
+                        "private_main": "git push private main",
+                        "fork_hackathon": "git push origin gaia-hackathon"
+                    }
+                }
+            },
+            "current_setup": "origin  git@github.com:AIFlowML/eliza_aiflow.git (fetch)\norigin  git@github.com:AIFlowML/eliza_aiflow.git (push)\nprivate git@github.com:AIFlowML/gaia_hack_grant.git (fetch)\nprivate git@github.com:AIFlowML/gaia_hack_grant.git (push)\nupstream        git@github.com:ai16z/eliza.git (fetch)\nupstream        git@github.com:ai16z/eliza.git (push)"
+        }
+    },
+    "rules": {
+        "circular_dependencies": "error",
+        "typescript": {
+            "strict": true,
+            "noImplicitAny": true,
+            "noUnusedLocals": true,
+            "noUnusedParameters": true
+        },
+        "react": {
+            "hooks": {
+                "rules-of-hooks": "error",
+                "exhaustive-deps": "warn"
+            }
+        },
+        "next": {
+            "preferServerComponents": true,
+            "strictMode": true
+        },
+        "tool_development": {
+            "test_location": "All test files must be placed in /Users/ilessio/dev-agents/gaia_local/eliza_aiflow/tools",
+            "naming_convention": "Test files should be named test_*.py matching their tool name",
+            "environment": "All tools must be tested in the eve-app conda environment",
+            "imports": "Use absolute imports from tools directory (e.g., from tools.github_llm import GithubLLM)"
+        },
+        "code_style": {
+            "python": {
+                "formatter": "black",
+                "line_length": 100,
+                "docstrings": "Google style"
+            }
+        },
+        "tool_usage": {
+            "environment": "Always use the eve-app conda environment and set PYTHONPATH",
+            "command_format": "conda activate eve-app && PYTHONPATH=/Users/ilessio/dev-agents/gaia_local/eliza_aiflow python {tool_path} {args}",
+            "tool_selection": {
+                "github_operations": "Use test_github_llm.py for any GitHub-related operations (repository info, issues, PRs)",
+                "web_research": "Use test_web_research.py for any web searches or information gathering",
+                "code_analysis": "Use test_code_analyzer.py for analyzing code quality, complexity, and security",
+                "system_monitoring": "Use test_monitor.py for checking system resources and performance"
+            },
+            "response_format": {
+                "1": "Explain what operation you're going to perform",
+                "2": "Show the exact command you're using",
+                "3": "Present the results in a clear, formatted way"
+            }
+        },
+        "documentation": {
+            "statusTracking": {
+                "location": "local_docs/project/project_status.md",
+                "updateFrequency": "After each significant change",
+                "required_sections": [
+                    "Current Status",
+                    "Recent Changes",
+                    "Planned Features",
+                    "Known Issues",
+                    "Dependencies"
+                ]
+            },
+            "frameworkReference": {
+                "primary_docs": [
+                    "eliza_data_flow.md",
+                    "eliza_core.md",
+                    "agent.md",
+                    "client_interface.md",
+                    "eliza_guide_llm.md"
+                ],
+                "usage": "Always check local documentation before external sources",
+                "updates": "Keep documentation in sync with implementation"
+            }
+        },
+        "client_development": {
+            "startup": {
+                "full_system": {
+                    "command": "pnpm dev",
+                    "description": "Start the complete system including agent and client",
+                    "steps": [
+                        "Run pnpm dev:build first to build all packages",
+                        "Starts core package",
+                        "Starts agent service",
+                        "Starts client development server"
+                    ],
+                    "ports": {
+                        "client": 5173,
+                        "agent": 7998
+                    }
+                },
+                "custom_character": {
+                    "command": "pnpm dev --characters=\"../characters/director.character.json\"",
+                    "description": "Start the system with a custom character configuration",
+                    "steps": [
+                        "1. Ensure character file exists in characters directory",
+                        "2. Run pnpm dev:build to build all packages",
+                        "3. Start system with custom character using --characters flag"
+                    ],
+                    "example": "pnpm dev --characters=\"../characters/director.character.json\"",
+                    "character_location": "./characters/",
+                    "supported_formats": [".character.json"]
+                },
+                "client_only": {
+                    "command": "cd client && pnpm dev",
+                    "description": "Start only the client development server",
+                    "port": 5173,
+                    "access": "http://localhost:5173",
+                    "warning": "Client-only mode won't work without the agent running"
+                },
+                "development_order": [
+                    "1. Run pnpm dev with custom character at the root",
+                    "2. Wait for all services to start (core, agent, client)",
+                    "3. Access client at http://localhost:5173",
+                    "4. Verify agent connection at http://localhost:7998",
+                    "5. Verify custom character is loaded in the agent list"
+                ],
+                "multi_character": {
+                    "command": "pnpm dev --characters=\"../characters/director.character.json,../characters/submission.character.json,../characters/evaluation.character.json,../characters/milestone.character.json,../characters/distribution.character.json\"",
+                    "description": "Start the system with multiple agent characters",
+                    "team_composition": {
+                        "director": "Director/Manager character for coordination",
+                        "submission": "Submission processing character",
+                        "evaluation": "Evaluation and review character",
+                        "milestone": "Milestone tracking character",
+                        "distribution": "Grant distribution character"
+                    },
+                    "steps": [
+                        "1. Ensure all character files exist in characters directory",
+                        "2. Run pnpm dev:build to build all packages",
+                        "3. Start system with comma-separated character list"
+                    ],
+                    "example": {
+                        "full_team": {
+                            "command": "pnpm dev --characters=\"../characters/director.character.json,../characters/submission.character.json,../characters/evaluation.character.json,../characters/milestone.character.json,../characters/distribution.character.json\"",
+                            "description": "Start with all team members",
+                            "copy_paste_ready": "pnpm dev --characters=\"../characters/director.character.json,../characters/submission.character.json,../characters/evaluation.character.json,../characters/milestone.character.json,../characters/distribution.character.json\""
+                        },
+                        "partial_team": "pnpm dev --characters=\"../characters/director.character.json,../characters/submission.character.json\"",
+                        "custom_selection": "Combine any characters by separating paths with commas"
+                    },
+                    "character_files": {
+                        "location": "./characters/",
+                        "available": [
+                            "director.character.json",
+                            "submission.character.json",
+                            "evaluation.character.json",
+                            "milestone.character.json",
+                            "distribution.character.json"
+                        ]
+                    }
+                }
+            },
+            "development_flow": [
+                "Start the full system with desired character combination",
+                "Test individual and group agent interactions",
+                "Monitor console for any errors or warnings",
+                "Use the chat interface at /:agentId/chat for testing each agent"
+            ],
+            "testing_routes": {
+                "root": "/",
+                "agent_list": "/",
+                "agent_detail": "/:agentId",
+                "agent_chat": "/:agentId/chat",
+                "character": "/:agentId/character"
+            }
+        }
+    },
+    "search": {
+        "excludePatterns": [
+            "node_modules",
+            ".next",
+            "dist",
+            "build",
+            ".git",
+            "*.pyc",
+            "__pycache__"
+        ],
+        "includePatterns": [
+            "*.ts",
+            "*.tsx",
+            "*.js",
+            "*.jsx",
+            "*.py",
+            "*.json",
+            "*.md"
+        ]
+    },
+    "agentSystem": {
+        "framework": "Laser",
+        "mainAgentFile": "/Users/ilessio/dev-agents/gaia_local/eliza_aiflow/agent/src/index.ts",
+        "characterExample": "/Users/ilessio/dev-agents/gaia_local/eliza_aiflow/characters/submission.character.json",
+        "execution": {
+            "singleAgent": "pnpm run build && pnpm run start --characters=\"../characters/submission.character.json\"",
+            "multiAgent": "pnpm run build && pnpm run start --characters=\"../characters/director.character.json,../characters/submission.character.json\"",
+            "setup": [
+                "pnpm install",
+                "pnpm run build"
+            ]
+        },
+        "rules": {
+            "agentModification": "Do not modify agent code directly in repository",
+            "characterCreation": "Create separate JSON files for each agent in characters folder",
+            "multiAgent": "System must support multiple agents running simultaneously",
+            "dependencies": "Watch for circular dependencies when adding new libraries"
+        }
+    },
+    "bestPractices": {
+        "javascript": {
+            "general": [
+                "Use functional programming patterns",
+                "Avoid classes unless absolutely necessary",
+                "Use TypeScript for all new code",
+                "Keep functions pure and small",
+                "Use meaningful variable names"
+            ],
+            "naming": [
+                "Use camelCase for variables and functions",
+                "Use PascalCase for components",
+                "Use UPPER_CASE for constants",
+                "Use descriptive names with auxiliary verbs (isLoading, hasError)"
+            ],
+            "imports": [
+                "Use named exports",
+                "Avoid default exports",
+                "Group imports by type (React, components, utils, types)",
+                "Avoid circular dependencies"
+            ],
+            "components": [
+                "Keep components small and focused",
+                "Use functional components",
+                "Implement proper error boundaries",
+                "Use React.memo for performance optimization"
+            ]
+        },
+        "typescript": {
+            "types": [
+                "Use interfaces over types when possible",
+                "Export all interfaces/types",
+                "Use strict type checking",
+                "Avoid any type"
+            ],
+            "generics": [
+                "Use generics for reusable components",
+                "Properly constrain generic types",
+                "Use meaningful type parameter names"
+            ]
+        },
+        "agentDevelopment": {
+            "characterStructure": [
+                "Define clear agent roles in JSON",
+                "Include necessary knowledge base",
+                "Specify agent interactions",
+                "Define communication protocols"
+            ],
+            "multiAgentSystem": [
+                "Design for concurrent operation",
+                "Implement proper error handling",
+                "Use message queues for communication",
+                "Implement fallback mechanisms"
+            ],
+            "web3Integration": [
+                "Follow Web3 security best practices",
+                "Implement proper key management",
+                "Use secure communication channels",
+                "Implement proper error handling for blockchain operations"
+            ]
+        },
+        "documentation": {
+            "projectStatus": [
+                "Keep project_status.md up to date",
+                "Document all major changes",
+                "Track progress regularly",
+                "Include technical decisions",
+                "Note dependencies and versions"
+            ],
+            "frameworkUsage": [
+                "Reference local docs first",
+                "Follow established patterns",
+                "Document new solutions",
+                "Update guides with examples",
+                "Maintain consistency"
+            ]
+        },
+        "elizaFramework": {
+            "agentDesign": [
+                "Design agents with single responsibility principle",
+                "Implement proper memory management for each agent",
+                "Use character files for personality configuration",
+                "Separate business logic from agent behavior",
+                "Implement proper error recovery mechanisms",
+                "Use RAG for knowledge-intensive tasks",
+                "Design for multi-agent collaboration",
+                "Examples": {
+                    "agentRuntime": {
+                        "setup": `
+                            const runtime = new AgentRuntime({
+                                agentId: uuid(),
+                                databaseAdapter: new PostgresAdapter(),
+                                modelProvider: ModelProviderName.ANTHROPIC,
+                                token: process.env.ANTHROPIC_API_KEY,
+                                character: defaultCharacter,
+                                actions: customActions,
+                                evaluators: customEvaluators,
+                                providers: contextProviders
+                            });
+                        `,
+                        "usage": "Use AgentRuntime for managing message processing, action registration, and service interactions"
+                    },
+                    "memoryManagement": {
+                        "setup": `
+                            // Message memory example
+                            await runtime.messageManager.store({
+                                type: "message",
+                                content: { text: messageText },
+                                roomId: currentRoomId,
+                                userId: senderId
+                            });
+
+                            // Description memory example
+                            await runtime.descriptionManager.store({
+                                type: "user_description",
+                                content: { description: userDescription },
+                                roomId: currentRoomId,
+                                userId: targetUserId
+                            });
+                        `
+                    }
+                }
+            ],
+            "memoryManagement": [
+                "Use messageManager for short-term conversation context",
+                "Use descriptionManager for user-specific facts",
+                "Use loreManager for static knowledge",
+                "Implement regular memory cleanup",
+                "Cache frequently accessed data",
+                "Use vector search for contextual recall",
+                "Maintain memory consistency across agents",
+                "Examples": {
+                    "vectorStorage": `
+                        async function storeMemory(runtime: IAgentRuntime, content: string) {
+                            const embedding = await runtime.embed(content);
+                            await runtime.databaseAdapter.createMemory({
+                                type: "message",
+                                content: { text: content },
+                                embedding,
+                                roomId: roomId,
+                                userId: userId
+                            });
+                        }
+                    `,
+                    "memoryRetrieval": `
+                        async function searchMemories(runtime: IAgentRuntime, query: string) {
+                            const embedding = await runtime.embed(query);
+                            return runtime.databaseAdapter.searchMemoriesByEmbedding(embedding, {
+                                match_threshold: 0.8,
+                                count: 10,
+                                tableName: "memories"
+                            });
+                        }
+                    `
+                }
+            ],
+            "actionImplementation": [
+                "Keep actions atomic and focused",
+                "Implement proper validation logic",
+                "Use similes for action recognition",
+                "Handle action side effects gracefully",
+                "Implement proper rollback mechanisms",
+                "Document action examples thoroughly",
+                "Consider action chaining implications",
+                "Examples": {
+                    "swapImplementation": `
+                        async function executeSwap(runtime: IAgentRuntime, input: {
+                            tokenIn: string;
+                            tokenOut: string;
+                            amountIn: number;
+                            slippage: number;
+                        }): Promise<string> {
+                            // Prepare transaction
+                            const { swapTransaction } = await getSwapTransaction(input);
+
+                            // Sign transaction
+                            const keypair = getKeypairFromPrivateKey(
+                                runtime.getSetting("SOLANA_PRIVATE_KEY") ??
+                                runtime.getSetting("WALLET_PRIVATE_KEY")
+                            );
+                            transaction.sign([keypair]);
+
+                            // Execute swap
+                            const signature = await connection.sendTransaction(transaction);
+
+                            // Confirm transaction
+                            await connection.confirmTransaction({
+                                signature,
+                                blockhash: latestBlockhash.blockhash,
+                                lastValidBlockHeight: latestBlockhash.lastValidBlockHeight
+                            });
+
+                            return signature;
+                        }
+                    `
+                }
+            ],
+            "databaseManagement": [
+                "Implement proper database schema setup",
+                "Use vector indexing for efficient data retrieval",
+                "Monitor database performance",
+                "Implement proper error handling",
+                "Examples": {
+                    "schemaSetup": `
+                        -- Create base tables
+                        CREATE TABLE accounts (
+                            "id" UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                            "createdAt" TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                            "name" TEXT,
+                            "username" TEXT UNIQUE,
+                            "email" TEXT NOT NULL UNIQUE,
+                            "avatarUrl" TEXT,
+                            "details" JSONB DEFAULT '{}'::jsonb
+                        );
+
+                        CREATE TABLE memories (
+                            "id" UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+                            "type" TEXT NOT NULL,
+                            "createdAt" TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                            "content" JSONB NOT NULL,
+                            "embedding" vector(1536),
+                            "userId" UUID REFERENCES accounts("id"),
+                            "agentId" UUID REFERENCES accounts("id"),
+                            "roomId" UUID REFERENCES rooms("id"),
+                            "isUnique" BOOLEAN DEFAULT true NOT NULL
+                        );
+                    `,
+                    "vectorIndexing": `
+                        -- Set up vector similarity search
+                        CREATE INDEX idx_memories_embedding
+                        ON memories USING hnsw ("embedding" vector_cosine_ops);
+                    `
+                }
+            ],
+            "modelConfiguration": [
+                "Implement proper model configuration",
+                "Monitor model performance",
+                "Examples": {
+                    "temperatureSettings": `
+                        const temperatureSettings = {
+                            creative: {
+                                temperature: 0.8,
+                                frequency_penalty: 0.7,
+                                presence_penalty: 0.7
+                            },
+                            balanced: {
+                                temperature: 0.5,
+                                frequency_penalty: 0.3,
+                                presence_penalty: 0.3
+                            },
+                            precise: {
+                                temperature: 0.2,
+                                frequency_penalty: 0.0,
+                                presence_penalty: 0.0
+                            }
+                        };
+                    `,
+                    "contextWindow": `
+                        const contextSettings = {
+                            OPENAI: {
+                                maxInputTokens: 128000,
+                                maxOutputTokens: 8192
+                            },
+                            ANTHROPIC: {
+                                maxInputTokens: 200000,
+                                maxOutputTokens: 8192
+                            }
+                        };
+                    `
+                }
+            ],
+            "errorHandling": [
+                "Implement proper error handling",
+                "Examples": {
+                    "transactionErrors": `
+                        async function handleTransactionError(error: Error, transaction: Transaction): Promise<void> {
+                            if (error.message.includes("insufficient funds")) {
+                                await handleInsufficientFunds();
+                            } else if (error.message.includes("slippage tolerance exceeded")) {
+                                await handleSlippageError(transaction);
+                            } else {
+                                await logTransactionError(error, transaction);
+                            }
+                        }
+                    `,
+                    "recoveryProcedures": `
+                        async function recoverFromError(error: Error, context: TradingContext): Promise<void> {
+                            // Stop all active trades
+                            await stopActiveTrades();
+
+                            // Close risky positions
+                            await closeRiskyPositions();
+
+                            // Reset system state
+                            await resetTradingState();
+
+                            // Notify administrators
+                            await notifyAdministrators(error, context);
+                        }
+                    `
+                }
+            ],
+            "monitoring": [
+                "Track agent performance metrics",
+                "Monitor memory usage",
+                "Track action success rates",
+                "Monitor provider health",
+                "Track client connection status",
+                "Regular system health checks",
+                "Performance bottleneck detection",
+                "Examples": {
+                    "healthChecks": `
+                        async function performHealthChecks(): Promise<HealthStatus> {
+                            return {
+                                connection: await checkConnectionStatus(),
+                                wallet: await checkWalletBalance(),
+                                orders: await checkOpenOrders(),
+                                positions: await checkPositions()
+                            };
+                        }
+                    `,
+                    "safetyLimits": `
+                        const SAFETY_LIMITS = {
+                            MAX_POSITION_SIZE: 0.1, // 10% of portfolio
+                            MAX_SLIPPAGE: 0.05,     // 5% slippage
+                            MIN_LIQUIDITY: 1000,    // $1000 minimum liquidity
+                            MAX_PRICE_IMPACT: 0.03, // 3% price impact
+                            STOP_LOSS: 0.15         // 15% stop loss
+                        };
+                    `
+                }
+            ]
+        }
+    }
+}

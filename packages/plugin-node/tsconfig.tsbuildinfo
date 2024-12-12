@@ -1,0 +1,1 @@
+{"root":["./src/echogarden.d.ts","./src/environment.ts","./src/index.ts","./src/services/audioutils.ts","./src/services/browser.ts","./src/services/image.ts","./src/services/index.ts","./src/services/llama.ts","./src/services/pdf.ts","./src/services/speech.ts","./src/services/transcription.ts","./src/services/video.ts","./src/vendor/vitsvoicelist.ts"],"version":"5.6.3"}

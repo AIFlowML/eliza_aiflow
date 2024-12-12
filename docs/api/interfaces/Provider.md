@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Provider
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Provider
 
 # Interface: Provider
 
@@ -26,4 +26,4 @@ Data retrieval function
 
 #### Defined in
 
-[packages/core/src/types.ts:457](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L457)
+[packages/core/src/types.ts:460](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L460)

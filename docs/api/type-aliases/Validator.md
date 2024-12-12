@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Validator
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Validator
 
 # Type Alias: Validator()
 
@@ -20,4 +20,4 @@ Validator function type for actions/evaluators
 
 ## Defined in
 
-[packages/core/src/types.ts:383](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L383)
+[packages/core/src/types.ts:386](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L386)

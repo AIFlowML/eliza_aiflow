@@ -4,6 +4,7 @@ import { AutoClientInterface } from "@ai16z/client-auto";
 import { DirectClientInterface } from "@ai16z/client-direct";
 import { DiscordClientInterface } from "@ai16z/client-discord";
 import { SlackClientInterface } from "@ai16z/client-slack";
+import { RedditClientInterface } from "@ai16z/client-reddit";
 import { TelegramClientInterface } from "@ai16z/client-telegram";
 import { TwitterClientInterface } from "@ai16z/client-twitter";
 import {
@@ -307,6 +308,8 @@ export async function initializeClients(
     const clientTypes =
         character.clients?.map((str) => str.toLowerCase()) || [];
 
+    elizaLogger.debug("Initializing clients:", clientTypes);
+
     if (clientTypes.includes("auto")) {
         const autoClient = await AutoClientInterface.start(runtime);
         if (autoClient) clients.push(autoClient);
@@ -325,12 +328,24 @@ export async function initializeClients(
         const twitterClients = await TwitterClientInterface.start(runtime);
         clients.push(twitterClients);
     }
-    // TODO: Add Slack client to the list
+    
     if (clientTypes.includes("slack")) {
         const slackClient = await SlackClientInterface.start(runtime);
         if (slackClient) clients.push(slackClient);
     }
-    // TODO: Add Slack client to the list
+
+    if (clientTypes.includes("reddit")) {
+        elizaLogger.debug("Starting Reddit client...");
+        try {
+            const redditClient = await RedditClientInterface.start(runtime);
+            if (redditClient) {
+                elizaLogger.debug("Reddit client started successfully");
+                clients.push(redditClient);
+            }
+        } catch (error) {
+            elizaLogger.error("Failed to start Reddit client:", error);
+        }
+    }
     
     if (character.plugins?.length > 0) {
         for (const plugin of character.plugins) {

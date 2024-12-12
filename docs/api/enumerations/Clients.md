@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Clients
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Clients
 
 # Enumeration: Clients
 
@@ -12,7 +12,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:599](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L599)
+[packages/core/src/types.ts:602](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L602)
 
 ***
 
@@ -22,7 +22,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:600](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L600)
+[packages/core/src/types.ts:603](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L603)
 
 ***
 
@@ -32,7 +32,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:601](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L601)
+[packages/core/src/types.ts:604](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L604)
 
 ***
 
@@ -42,7 +42,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:602](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L602)
+[packages/core/src/types.ts:605](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L605)
 
 ***
 
@@ -52,4 +52,14 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:603](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L603)
+[packages/core/src/types.ts:606](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L606)
+
+***
+
+### REDDIT
+
+> **REDDIT**: `"reddit"`
+
+#### Defined in
+
+[packages/core/src/types.ts:607](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L607)

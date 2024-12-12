@@ -1,0 +1,43 @@
+import { ICacheManager } from "@ai16z/eliza";
+import { IAgentRuntime, Provider } from "@ai16z/eliza";
+import { DexScreenerData, DexScreenerPair, HolderData, ProcessedTokenData, TokenSecurityData, TokenTradeData, CalculatedBuyAmounts, Prices, TokenCodex } from "../types/token.ts";
+import { WalletProvider, Item } from "./wallet.ts";
+export declare class TokenProvider {
+    private tokenAddress;
+    private walletProvider;
+    private cacheManager;
+    private cache;
+    private cacheKey;
+    private NETWORK_ID;
+    private GRAPHQL_ENDPOINT;
+    constructor(tokenAddress: string, walletProvider: WalletProvider, cacheManager: ICacheManager);
+    private readFromCache;
+    private writeToCache;
+    private getCachedData;
+    private setCachedData;
+    private fetchWithRetry;
+    getTokensInWallet(runtime: IAgentRuntime): Promise<Item[]>;
+    getTokenFromWallet(runtime: IAgentRuntime, tokenSymbol: string): Promise<string | null>;
+    fetchTokenCodex(): Promise<TokenCodex>;
+    fetchPrices(): Promise<Prices>;
+    calculateBuyAmounts(): Promise<CalculatedBuyAmounts>;
+    fetchTokenSecurity(): Promise<TokenSecurityData>;
+    fetchTokenTradeData(): Promise<TokenTradeData>;
+    fetchDexScreenerData(): Promise<DexScreenerData>;
+    searchDexScreenerData(symbol: string): Promise<DexScreenerPair | null>;
+    getHighestLiquidityPair(dexData: DexScreenerData): DexScreenerPair | null;
+    analyzeHolderDistribution(tradeData: TokenTradeData): Promise<string>;
+    fetchHolderList(): Promise<HolderData[]>;
+    filterHighValueHolders(tradeData: TokenTradeData): Promise<Array<{
+        holderAddress: string;
+        balanceUsd: string;
+    }>>;
+    checkRecentTrades(tradeData: TokenTradeData): Promise<boolean>;
+    countHighSupplyHolders(securityData: TokenSecurityData): Promise<number>;
+    getProcessedTokenData(): Promise<ProcessedTokenData>;
+    shouldTradeToken(): Promise<boolean>;
+    formatTokenData(data: ProcessedTokenData): string;
+    getFormattedTokenReport(): Promise<string>;
+}
+declare const tokenProvider: Provider;
+export { tokenProvider };

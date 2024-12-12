@@ -1,4 +1,4 @@
-# @ai16z/eliza v0.1.4-alpha.3
+# @ai16z/eliza v0.1.5-alpha.3
 
 ## Enumerations
 
@@ -53,6 +53,8 @@
 - [IBrowserService](interfaces/IBrowserService.md)
 - [ISpeechService](interfaces/ISpeechService.md)
 - [IPdfService](interfaces/IPdfService.md)
+- [ISlackService](interfaces/ISlackService.md)
+- [IRedditService](interfaces/IRedditService.md)
 
 ## Type Aliases
 

@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Actor
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Actor
 
 # Interface: Actor
 
@@ -14,7 +14,7 @@ Display name
 
 #### Defined in
 
-[packages/core/src/types.ts:61](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L61)
+[packages/core/src/types.ts:62](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L62)
 
 ***
 
@@ -26,7 +26,7 @@ Username/handle
 
 #### Defined in
 
-[packages/core/src/types.ts:64](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L64)
+[packages/core/src/types.ts:65](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L65)
 
 ***
 
@@ -56,7 +56,7 @@ Favorite quote
 
 #### Defined in
 
-[packages/core/src/types.ts:67](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L67)
+[packages/core/src/types.ts:68](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L68)
 
 ***
 
@@ -68,4 +68,4 @@ Unique identifier
 
 #### Defined in
 
-[packages/core/src/types.ts:79](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L79)
+[packages/core/src/types.ts:80](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L80)

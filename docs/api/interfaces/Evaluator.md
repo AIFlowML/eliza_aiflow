@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / Evaluator
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / Evaluator
 
 # Interface: Evaluator
 
@@ -14,7 +14,7 @@ Whether to always run
 
 #### Defined in
 
-[packages/core/src/types.ts:431](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L431)
+[packages/core/src/types.ts:434](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L434)
 
 ***
 
@@ -26,7 +26,7 @@ Detailed description
 
 #### Defined in
 
-[packages/core/src/types.ts:434](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L434)
+[packages/core/src/types.ts:437](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L437)
 
 ***
 
@@ -38,7 +38,7 @@ Similar evaluator descriptions
 
 #### Defined in
 
-[packages/core/src/types.ts:437](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L437)
+[packages/core/src/types.ts:440](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L440)
 
 ***
 
@@ -50,7 +50,7 @@ Example evaluations
 
 #### Defined in
 
-[packages/core/src/types.ts:440](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L440)
+[packages/core/src/types.ts:443](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L443)
 
 ***
 
@@ -62,7 +62,7 @@ Handler function
 
 #### Defined in
 
-[packages/core/src/types.ts:443](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L443)
+[packages/core/src/types.ts:446](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L446)
 
 ***
 
@@ -74,7 +74,7 @@ Evaluator name
 
 #### Defined in
 
-[packages/core/src/types.ts:446](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L446)
+[packages/core/src/types.ts:449](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L449)
 
 ***
 
@@ -86,4 +86,4 @@ Validation function
 
 #### Defined in
 
-[packages/core/src/types.ts:449](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L449)
+[packages/core/src/types.ts:452](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L452)

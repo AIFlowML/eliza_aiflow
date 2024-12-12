@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.4-alpha.3](../index.md) / IVideoService
+[@ai16z/eliza v0.1.5-alpha.3](../index.md) / IVideoService
 
 # Interface: IVideoService
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:973](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L973)
+[packages/core/src/types.ts:987](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L987)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:978](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L978)
+[packages/core/src/types.ts:992](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L992)
 
 ***
 
@@ -66,7 +66,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1080](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1080)
+[packages/core/src/types.ts:1094](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1094)
 
 ***
 
@@ -84,7 +84,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1081](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1081)
+[packages/core/src/types.ts:1095](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1095)
 
 ***
 
@@ -102,7 +102,7 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1082](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1082)
+[packages/core/src/types.ts:1096](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1096)
 
 ***
 
@@ -122,4 +122,4 @@ Add abstract initialize method that must be implemented by derived classes
 
 #### Defined in
 
-[packages/core/src/types.ts:1083](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1083)
+[packages/core/src/types.ts:1097](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1097)

@@ -1,0 +1,289 @@
+# .cursorrules for Eliza Framework
+
+# Global Configuration
+project:
+  type: "TypeScript/JavaScript"
+  framework: "Eliza Framework"
+  tools_dir: "./tools"
+
+# Environment Configuration
+environment:
+  conda:
+    name: "Eve-app"
+    activate_command: "conda activate Eve-app"
+  tools:
+    base_dir: "./tools"
+    required:
+      - name: "Monitor.py"
+        type: "core"
+        description: "Core tool for agent communication and task monitoring"
+        auto_start: true
+    optional:
+      - name: "web_search.py"
+        type: "research"
+        description: "Web search tool for gathering information"
+        use_when: "user_requested"
+      - name: "GitHub.py"
+        type: "research"
+        description: "GitHub integration for code research"
+        use_when: "user_requested"
+
+# Communication Protocol
+communication:
+  markers:
+    start: "# AgentTask: START"
+    in_progress: "# AgentTask: IN_PROGRESS"
+    review: "# AgentTask: REVIEW_NEEDED"
+    done: "# AgentTask: DONE"
+    handoff: "# AgentTask: HANDOFF"
+
+  reports:
+    format: "markdown"
+    location: "${working_dir}/reports"
+    required_sections:
+      - Summary
+      - Changes Made
+      - Test Results
+      - Next Steps
+      - Dependencies
+      - Security Considerations
+
+# Agents Configuration
+agents:
+  - name: IssueSolverAgent
+    role: "TypeScript/JavaScript solution architect and implementer"
+    description: "Researches, designs, and implements code solutions for the Eliza Framework"
+
+    permissions:
+      allowed_directories:
+        - "${tools_dir}"
+        - "${working_dir}"
+      file_operations:
+        - read
+        - write
+        - execute
+
+    tasks:
+      initialization:
+        - type: "user_input"
+          required:
+            - "Root directory of the project"
+            - "Working subdirectory"
+            - "Task description and requirements"
+          validation:
+            - "Verify directories exist"
+            - "Set working_dir environment variable"
+            - "Validate access permissions"
+
+      research:
+        - type: "information_gathering"
+          steps:
+            - "Execute web_search.py for relevant information (when requested)"
+            - "Use GitHub.py to find similar implementations (when requested)"
+            - "Document findings in research.md"
+
+        - type: "analysis"
+          steps:
+            - "Review existing codebase"
+            - "Identify integration points"
+            - "Document dependencies"
+
+      planning:
+        - type: "solution_design"
+          deliverables:
+            - "Technical design document"
+            - "Implementation plan"
+            - "Test strategy"
+            - "Integration approach"
+
+      implementation:
+        - type: "coding"
+          standards:
+            - "Follow TypeScript best practices"
+            - "Use ES6+ features appropriately"
+            - "Maintain consistent code style"
+          requirements:
+            - "Add JSDoc comments"
+            - "Include type definitions"
+            - "Write unit tests"
+            - "Add error handling"
+
+      handoff:
+        - type: "completion"
+          steps:
+            - "Add completion marker"
+            - "Generate documentation"
+            - "Create handoff report"
+            - "Notify DebugAgent"
+
+  - name: DebugAgent
+    role: "Code quality assurance and validation"
+    description: "Validates, tests, and improves code quality"
+
+    tools:
+      required:
+        - eslint
+        - typescript
+        - jest
+        - prettier
+
+    tasks:
+      monitoring:
+        - type: "file_watch"
+          watch_for:
+            - pattern: "**/*.{ts,js}"
+            - marker: "# AgentTask: HANDOFF"
+
+      validation:
+        - type: "static_analysis"
+          steps:
+            - "Run TypeScript compiler"
+            - "Execute ESLint"
+            - "Check Prettier formatting"
+
+        - type: "testing"
+          steps:
+            - "Run unit tests"
+            - "Check code coverage"
+            - "Perform integration tests"
+
+        - type: "security"
+          steps:
+            - "Run dependency audit"
+            - "Check for common vulnerabilities"
+            - "Validate access patterns"
+
+      documentation:
+        - type: "reporting"
+          format: "markdown"
+          sections:
+            - title: "Code Quality Report"
+              content:
+                - "Linting results"
+                - "Type checking results"
+                - "Test coverage"
+
+            - title: "Security Analysis"
+              content:
+                - "Dependency audit results"
+                - "Vulnerability scan results"
+
+            - title: "Performance Review"
+              content:
+                - "Code complexity metrics"
+                - "Performance considerations"
+
+            - title: "Recommendations"
+              content:
+                - "Suggested improvements"
+                - "Best practices alignment"
+                - "Technical debt items"
+
+      completion:
+        - type: "handoff"
+          steps:
+            - "Add completion marker"
+            - "Generate final report"
+            - "Notify user of completion"
+            - "Provide review checklist"
+
+# Workflow Rules
+workflow:
+  sequence:
+    - agent: "IssueSolverAgent"
+      trigger: "user_request"
+      completion: "handoff_to_debug"
+
+    - agent: "DebugAgent"
+      trigger: "solver_handoff"
+      completion: "notify_user"
+
+  error_handling:
+    retry_attempts: 3
+    error_reporting: true
+    fallback_strategy: "notify_user"
+
+  notifications:
+    channels:
+      - "console"
+      - "file_system"
+    formats:
+      - "markdown"
+      - "plain_text"
+
+# Debugging Protocol
+debug_flow:
+  steps:
+    1. Read Error:
+       - Read and analyze the error message
+       - Note file location, line number, and error type
+       - Identify affected code section
+
+    2. Read Documentation:
+       Required documentation files:
+       - local_docs/eliza_doc_small.txt
+       - local_docs/eliza_data_flow.md
+       - local_docs/eliza_core.md
+       Search order:
+       - First search in specific error context
+       - Then search for component definitions
+       - Finally search for usage examples
+
+    3. Use Real Components:
+       - Check if component exists in @ai16z/eliza
+       - Priority order for components:
+         1. Core components (@ai16z/eliza)
+         2. Database adapters (@ai16z/adapter-*)
+         3. Client interfaces (@ai16z/client-*)
+         4. Plugins (@ai16z/plugin-*)
+       - Never mock what exists in the framework
+
+    4. Fix File:
+       - Apply fix based on documentation
+       - Follow type definitions and interfaces
+       - Use proper imports and enums
+       - Reuse existing code patterns
+
+    5. Lint Check:
+       Commands to use:
+       - For TypeScript: pnpm run lint
+       - For tests: pnpm run test
+       Lint configuration:
+       - Uses ESLint with TypeScript parser
+       - Follows Prettier formatting
+       - Adheres to @ai16z/eliza style guide
+
+  rules:
+    - Always follow steps in order
+    - Document each step's findings
+    - Verify fix with lint before proceeding
+    - Use real code from framework when possible
+    - Don't create mock objects if real ones exist
+    - Prefer framework components over custom implementations
+    - Follow the same patterns as existing code
+
+  components_to_reuse:
+    database:
+      - SqliteDatabaseAdapter
+      - PostgresDatabaseAdapter
+      - DbCacheAdapter
+    logging:
+      - elizaLogger
+    runtime:
+      - AgentRuntime
+      - CacheManager
+    interfaces:
+      - IAgentRuntime
+      - IDatabaseAdapter
+      - IMemoryManager
+    types:
+      - Character
+      - Memory
+      - UUID
+      - ModelProviderName
+      - Clients
+    testing:
+      - Use real database adapters with :memory: option
+      - Use real logger with verbose disabled
+      - Use real cache manager
+      - Use actual enum values
