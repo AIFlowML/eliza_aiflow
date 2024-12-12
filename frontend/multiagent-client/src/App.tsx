@@ -4,6 +4,7 @@ import DistributionPage from './pages/distribution.tsx';
 import EvaluationPage from './pages/evaluation.tsx';
 import MilestonePage from './pages/milestone.tsx';
 import SubmissionPage from './pages/submission.tsx';
+import Home from "./pages/Home.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,28 +31,29 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <Router>
                 <div className="min-h-screen bg-gray-100">
-                    <nav className="bg-gray-800">
-                        <div className="max-w-7xl mx-auto px-4">
-                            <div className="flex items-center justify-between h-16">
-                                <div className="flex items-center">
-                                    <div className="flex-shrink-0">
-                                        <span className="text-white text-xl font-bold">
-                                            Multiagent Client
-                                        </span>
-                                    </div>
-                                    <div className="ml-10 flex items-baseline space-x-4">
-                                        <NavLink to="/">Distribution</NavLink>
-                                        <NavLink to="/evaluation">Evaluation</NavLink>
-                                        <NavLink to="/milestone">Milestone</NavLink>
-                                        <NavLink to="/submission">Submission</NavLink>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
+                    {/*<nav className="bg-gray-800">*/}
+                    {/*    <div className="max-w-7xl mx-auto px-4">*/}
+                    {/*        <div className="flex items-center justify-between h-16">*/}
+                    {/*            <div className="flex items-center">*/}
+                    {/*                <div className="flex-shrink-0">*/}
+                    {/*                    <span className="text-white text-xl font-bold">*/}
+                    {/*                        Multiagent Client*/}
+                    {/*                    </span>*/}
+                    {/*                </div>*/}
+                    {/*                <div className="ml-10 flex items-baseline space-x-4">*/}
+                    {/*                    <NavLink to="/">Distribution</NavLink>*/}
+                    {/*                    <NavLink to="/evaluation">Evaluation</NavLink>*/}
+                    {/*                    <NavLink to="/milestone">Milestone</NavLink>*/}
+                    {/*                    <NavLink to="/submission">Submission</NavLink>*/}
+                    {/*                </div>*/}
+                    {/*            </div>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</nav>*/}
 
                     <Routes>
-                        <Route path="/" element={<DistributionPage />} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/distribution" element={<DistributionPage />} />
                         <Route path="/evaluation" element={<EvaluationPage />} />
                         <Route path="/milestone" element={<MilestonePage />} />
                         <Route path="/submission" element={<SubmissionPage />} />
