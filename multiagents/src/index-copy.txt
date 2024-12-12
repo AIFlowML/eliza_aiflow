@@ -17,24 +17,6 @@
 
 import { PostgresDatabaseAdapter } from "@ai16z/adapter-postgres";
 import { SqliteDatabaseAdapter } from "@ai16z/adapter-sqlite";
-import { AutoClientInterface } from "@ai16z/client-auto";
-import { DirectClientInterface } from "@ai16z/client-direct";
-import { DiscordClientInterface } from "@ai16z/client-discord";
-import { SlackClientInterface } from "@ai16z/client-slack";
-import { RedditClientInterface } from "@ai16z/client-reddit";
-import { TelegramClientInterface } from "@ai16z/client-telegram";
-import { TwitterClientInterface } from "@ai16z/client-twitter";
-
-import { zgPlugin } from "@ai16z/plugin-0g";
-import { goatPlugin } from "@ai16z/plugin-goat";
-import { bootstrapPlugin } from "@ai16z/plugin-bootstrap";
-import { confluxPlugin } from "@ai16z/plugin-conflux";
-import { imageGenerationPlugin } from "@ai16z/plugin-image-generation";
-import { evmPlugin } from "@ai16z/plugin-evm";
-import { createNodePlugin } from "@ai16z/plugin-node";
-import { solanaPlugin } from "@ai16z/plugin-solana";
-import { aptosPlugin, TransferAptosToken } from "@ai16z/plugin-aptos";
-import { teePlugin } from "@ai16z/plugin-tee";
 import {
     AgentRuntime,
     CacheManager,
@@ -55,8 +37,6 @@ import {
     Memory,
     UUID,
     IMemoryManager,
-    State,
-    Plugin,
 } from "@ai16z/eliza";
 import { v4 } from 'uuid';
 import Database from "better-sqlite3";
@@ -65,12 +45,6 @@ import path from "path";
 import readline from "readline";
 import { fileURLToPath } from "url";
 import yargs from "yargs";
-import {
-    coinbaseCommercePlugin,
-    coinbaseMassPaymentsPlugin,
-    tradePlugin,
-    tokenContractPlugin,
-} from "@ai16z/plugin-coinbase";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -97,7 +71,6 @@ export class AgentOrchestrator {
     private agents: Map<UUID, IAgentRuntime> = new Map();
     /** Buffer for storing messages that need to be processed by each agent */
     private messageBuffer: Map<UUID, Memory[]> = new Map();
-    private agentStates: Map<UUID, State> = new Map();
 
     /**
      * Registers a new agent with the orchestrator
@@ -106,76 +79,7 @@ export class AgentOrchestrator {
     registerAgent(agent: IAgentRuntime): void {
         this.agents.set(agent.agentId, agent);
         this.messageBuffer.set(agent.agentId, []);
-        this.initializeAgentState(agent);
         elizaLogger.info(`Agent ${agent.agentId} registered with orchestrator`);
-    }
-
-    private async initializeAgentState(agent: IAgentRuntime): Promise<void> {
-        try {
-            // Initialize state using agent's composeState method
-            const initialState = await agent.composeState({
-                id: stringToUuid(v4()),
-                content: { text: "initialization" },
-                userId: agent.agentId,
-                roomId: stringToUuid("global"),
-                agentId: agent.agentId,
-                createdAt: Date.now()
-            });
-            this.agentStates.set(agent.agentId, initialState);
-        } catch (error) {
-            elizaLogger.error(`Error initializing state for agent ${agent.agentId}:`, error);
-            await this.handleError(error instanceof Error ? error : new Error(String(error)), agent);
-        }
-    }
-
-    private async handleError(error: Error, agent: IAgentRuntime): Promise<void> {
-        elizaLogger.error(`Error in agent ${agent.agentId}:`, error);
-
-        try {
-            // Stop processing for affected agent
-            const buffer = this.messageBuffer.get(agent.agentId);
-            if (buffer) {
-                elizaLogger.info(`Clearing message buffer for agent ${agent.agentId}`);
-                this.messageBuffer.set(agent.agentId, []);
-            }
-
-            // Reset agent state
-            await this.initializeAgentState(agent);
-
-            // Notify other agents if needed
-            await this.notifyAgentsOfError(agent.agentId);
-
-        } catch (recoveryError) {
-            elizaLogger.error(`Error during recovery for agent ${agent.agentId}:`, recoveryError);
-            // If recovery fails, remove agent from orchestrator
-            this.agents.delete(agent.agentId);
-            this.messageBuffer.delete(agent.agentId);
-            this.agentStates.delete(agent.agentId);
-        }
-    }
-
-    private async notifyAgentsOfError(failedAgentId: UUID): Promise<void> {
-        const errorMessage: Memory = {
-            id: stringToUuid(v4()),
-            content: {
-                text: `Agent ${failedAgentId} encountered an error and is recovering`,
-                type: 'system'
-            },
-            userId: stringToUuid("system"),
-            roomId: stringToUuid("global"),
-            agentId: failedAgentId,
-            createdAt: Date.now()
-        };
-
-        for (const [agentId, agent] of this.agents.entries()) {
-            if (agentId !== failedAgentId) {
-                try {
-                    await agent.messageManager.createMemory(errorMessage);
-                } catch (error) {
-                    elizaLogger.error(`Error notifying agent ${agentId}:`, error);
-                }
-            }
-        }
     }
 
     /**
@@ -193,59 +97,38 @@ export class AgentOrchestrator {
      * @param message The message to route
      */
     async routeMessage(fromAgentId: UUID, toAgentId: UUID, message: Memory): Promise<void> {
-        try {
-            const fromAgent = this.agents.get(fromAgentId);
-            const toAgent = this.agents.get(toAgentId);
+        const fromAgent = this.agents.get(fromAgentId);
+        const toAgent = this.agents.get(toAgentId);
 
-            if (!fromAgent || !toAgent) {
-                throw new Error(`Agent not found: ${!fromAgent ? fromAgentId : toAgentId}`);
-            }
-
-            // Update sender's state
-            const fromState = await fromAgent.composeState(message);
-            this.agentStates.set(fromAgentId, fromState);
-
-            // Store outgoing message
-            await fromAgent.messageManager.createMemory({
-                ...message,
-                content: {
-                    ...message.content,
-                    sentTo: toAgentId,
-                    type: 'outgoing'
-                }
-            });
-
-            // Create incoming message for recipient
-            const incomingMessage: Memory = {
-                ...message,
-                id: stringToUuid(v4()),
-                content: {
-                    ...message.content,
-                    receivedFrom: fromAgentId,
-                    type: 'incoming'
-                }
-            };
-
-            // Update recipient's state
-            const toState = await toAgent.composeState(incomingMessage);
-            this.agentStates.set(toAgentId, toState);
-
-            // Store incoming message
-            await toAgent.messageManager.createMemory(incomingMessage);
-
-            // Buffer the message
-            const buffer = this.messageBuffer.get(toAgentId) || [];
-            buffer.push(incomingMessage);
-            this.messageBuffer.set(toAgentId, buffer);
-
-        } catch (error) {
-            elizaLogger.error(`Error routing message from ${fromAgentId} to ${toAgentId}:`, error);
-            const errorMessage = error instanceof Error ? error.message : String(error);
-            const affectedAgent = this.agents.get(errorMessage.includes(fromAgentId) ? fromAgentId : toAgentId);
-            if (affectedAgent) {
-                await this.handleError(error instanceof Error ? error : new Error(String(error)), affectedAgent);
-            }
+        if (!fromAgent || !toAgent) {
+            throw new Error(`Agent not found: ${!fromAgent ? fromAgentId : toAgentId}`);
         }
+
+        // Store outgoing message in sender's memory
+        await fromAgent.messageManager.createMemory({
+            ...message,
+            content: {
+                ...message.content,
+                sentTo: toAgentId,
+                type: 'outgoing'
+            }
+        });
+
+        // Store incoming message in recipient's memory
+        await toAgent.messageManager.createMemory({
+            ...message,
+            id: stringToUuid(v4()),
+            content: {
+                ...message.content,
+                receivedFrom: fromAgentId,
+                type: 'incoming'
+            }
+        });
+
+        // Buffer the message for processing
+        const buffer = this.messageBuffer.get(toAgentId) || [];
+        buffer.push(message);
+        this.messageBuffer.set(toAgentId, buffer);
     }
 
     /**
@@ -254,37 +137,24 @@ export class AgentOrchestrator {
      * @param message The message to broadcast
      */
     async broadcast(fromAgentId: UUID, message: Memory): Promise<void> {
-        try {
-            const fromAgent = this.agents.get(fromAgentId);
-            if (!fromAgent) {
-                throw new Error(`Source agent not found: ${fromAgentId}`);
+        const fromAgent = this.agents.get(fromAgentId);
+        if (!fromAgent) {
+            throw new Error(`Source agent not found: ${fromAgentId}`);
+        }
+
+        // Store broadcast message in sender's memory
+        await fromAgent.messageManager.createMemory({
+            ...message,
+            content: {
+                ...message.content,
+                type: 'broadcast'
             }
+        });
 
-            // Update broadcaster's state
-            const fromState = await fromAgent.composeState(message);
-            this.agentStates.set(fromAgentId, fromState);
-
-            // Store broadcast message
-            await fromAgent.messageManager.createMemory({
-                ...message,
-                content: {
-                    ...message.content,
-                    type: 'broadcast'
-                }
-            });
-
-            // Route to all other agents
-            const routingPromises = Array.from(this.agents.keys())
-                .filter(agentId => agentId !== fromAgentId)
-                .map(agentId => this.routeMessage(fromAgentId, agentId, message));
-
-            await Promise.allSettled(routingPromises);
-
-        } catch (error) {
-            elizaLogger.error(`Error broadcasting message from ${fromAgentId}:`, error);
-            const fromAgent = this.agents.get(fromAgentId);
-            if (fromAgent) {
-                await this.handleError(error instanceof Error ? error : new Error(String(error)), fromAgent);
+        // Route message to all other agents
+        for (const [agentId, _] of this.agents.entries()) {
+            if (agentId !== fromAgentId) {
+                await this.routeMessage(fromAgentId, agentId, message);
             }
         }
     }
@@ -333,7 +203,12 @@ function getTokenForProvider(provider: ModelProviderName, character: Character):
     return token;
 }
 
-
+/**
+ * Retrieves a secret from character settings or environment variables
+ */
+function getSecret(character: Character, secret: string) {
+    return character.settings?.secrets?.[secret] || process.env[secret];
+}
 
 /**
  * Initializes the appropriate database adapter
@@ -369,66 +244,8 @@ function initializeDatabase(dataDir: string): IDatabaseAdapter & IDatabaseCacheA
  * Initializes client interfaces for an agent
  * Simplified to return empty array as client handling is removed
  */
-export async function initializeClients(
-    character: Character,
-    runtime: IAgentRuntime
-): Promise<Clients[]> {
-    const clients: Clients[] = [];
-    const clientTypes =
-        character.clients?.map((str) => str.toLowerCase()) || [];
-
-    elizaLogger.debug("Initializing clients:", clientTypes);
-
-    if (clientTypes.includes("auto")) {
-        const autoClient = await AutoClientInterface.start(runtime) as Clients;
-        if (autoClient) clients.push(autoClient);
-    }
-
-    if (clientTypes.includes("discord")) {
-        const discordClient = await DiscordClientInterface.start(runtime) as Clients;
-        clients.push(discordClient);
-    }
-
-    if (clientTypes.includes("telegram")) {
-        const telegramClient = await TelegramClientInterface.start(runtime) as Clients;
-        if (telegramClient) clients.push(telegramClient);
-    }
-
-    if (clientTypes.includes("twitter")) {
-        const twitterClient = await TwitterClientInterface.start(runtime) as Clients;
-        clients.push(twitterClient);
-    }
-
-    if (clientTypes.includes("slack")) {
-        const slackClient = await SlackClientInterface.start(runtime) as Clients;
-        if (slackClient) clients.push(slackClient);
-    }
-
-    if (clientTypes.includes("reddit")) {
-        elizaLogger.debug("Starting Reddit client...");
-        try {
-            const redditClient = await RedditClientInterface.start(runtime) as Clients;
-            if (redditClient) {
-                elizaLogger.debug("Reddit client started successfully");
-                clients.push(redditClient);
-            }
-        } catch (error) {
-            elizaLogger.error("Failed to start Reddit client:", error);
-        }
-    }
-
-    if (character.plugins?.length > 0) {
-        for (const plugin of character.plugins) {
-            if (plugin.clients) {
-                for (const client of plugin.clients) {
-                    const pluginClient = await client.start(runtime) as Clients;
-                    if (pluginClient) clients.push(pluginClient);
-                }
-            }
-        }
-    }
-
-    return clients;
+async function initializeClients(character: Character, runtime: IAgentRuntime): Promise<Clients[]> {
+    return [];
 }
 
 /**
@@ -794,47 +611,3 @@ main().catch((error) => {
     elizaLogger.error("Unhandled error:", error);
     process.exit(1);
 });
-
-let nodePlugin: any | undefined;
-
-export function getSecret(character: Character, secret: string) {
-    return character.settings?.secrets?.[secret] || process.env[secret];
-}
-
-export function configurePlugins(character: Character): Plugin[] {
-    nodePlugin ??= createNodePlugin();
-
-    return [
-        bootstrapPlugin,
-        getSecret(character, "CONFLUX_CORE_PRIVATE_KEY")
-            ? confluxPlugin
-            : null,
-        nodePlugin,
-        getSecret(character, "SOLANA_PUBLIC_KEY") ||
-        (getSecret(character, "WALLET_PUBLIC_KEY") &&
-            !getSecret(character, "WALLET_PUBLIC_KEY")?.startsWith("0x"))
-            ? solanaPlugin
-            : null,
-        getSecret(character, "EVM_PRIVATE_KEY") ||
-        (getSecret(character, "WALLET_PUBLIC_KEY") &&
-            !getSecret(character, "WALLET_PUBLIC_KEY")?.startsWith("0x"))
-            ? evmPlugin
-            : null,
-        getSecret(character, "ZEROG_PRIVATE_KEY") ? zgPlugin : null,
-        getSecret(character, "COINBASE_COMMERCE_KEY")
-            ? coinbaseCommercePlugin
-            : null,
-        getSecret(character, "FAL_API_KEY") ||
-        getSecret(character, "OPENAI_API_KEY") ||
-        getSecret(character, "HEURIST_API_KEY")
-            ? imageGenerationPlugin
-            : null,
-        ...(getSecret(character, "COINBASE_API_KEY") &&
-        getSecret(character, "COINBASE_PRIVATE_KEY")
-            ? [coinbaseMassPaymentsPlugin, tradePlugin, tokenContractPlugin]
-            : []),
-        getSecret(character, "WALLET_SECRET_SALT") ? teePlugin : null,
-        getSecret(character, "ALCHEMY_API_KEY") ? goatPlugin : null,
-        getSecret(character, "APTOS_PRIVATE_KEY") ? aptosPlugin : null,
-    ].filter(Boolean);
-}
