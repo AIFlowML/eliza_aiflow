@@ -1,0 +1,5 @@
+protobufjs@7.4.0
+eventemitter2@5.0.1
+fs-constants@1.0.0
+cssesc@3.0.0
+buffer-alloc-unsafe@1.1.0
