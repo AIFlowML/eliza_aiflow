@@ -1,4 +1,0 @@
-packages:
-  - 'memory_dump'
-  - 'memory_load'
-  - '../../../../packages/core'

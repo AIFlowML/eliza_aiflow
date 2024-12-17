@@ -1,17 +1,82 @@
+# Dependencies
 node_modules/
 pnpm-store/
+.pnpm-store/
+.turbo/
+.cache/
+
+# Build outputs
 dist/
 build/
-*.log
-coverage/
 .next/
-.cache/
-__pycache__/
-*.pyc
-.DS_Store
+.nuxt/
+.output/
+
+# Logs and debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+coverage/
+
+# Environment and local files
 .env
 .env.*
 !.env.example
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Project specific
 scripts/Eliza_Installation/pnpm-store/
 scripts/Eliza_Installation/temp/
-local_docs/project/
+local_docs/
+characters/
+
+# Large binary files
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.gguf
+*.onnx
+*.wav
+*.mp3
+*.sqlite
+*.db
+
+# Cache and temporary files
+.turbo/
+.cache/
+*.cache
+**/cache/
+**/.cache/
+**/dist/
+**/build/
+**/.next/
+**/.nuxt/
+**/.output/
+
+# Documentation (except crucial files)
+docs/
+!docs/README.md
+
+# Test files
+**/__tests__/
+**/*.test.*
+**/*.spec.*
+test-results/
+playwright-report/
+test_data/
+
+# Editor and IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
