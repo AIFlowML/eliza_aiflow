@@ -1,0 +1,82 @@
+# Node modules and package management
+**/node_modules/
+**/.pnpm-store/
+**/pnpm-lock.yaml
+
+# Build outputs
+**/dist/
+**/build/
+**/.next/
+**/.nuxt/
+**/.output/
+
+# Cache directories
+**/.cache/
+**/.temp/
+.vite/
+
+# Environment files
+.env*
+!.env.example
+
+# Documentation (except crucial files)
+local_docs/**
+!local_docs/project/project_status.md
+!local_docs/README.md
+
+# Test files and coverage
+**/coverage/
+**/__tests__/
+**/*.test.*
+**/*.spec.*
+
+# Debug logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# Editor directories
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large binary files
+**/*.zip
+**/*.tar
+**/*.gz
+**/*.rar
+**/*.7z
+
+# Temporary files
+**/*.tmp
+**/*.temp
+**/*.bak
+
+# Python virtual environments
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.Python
+.env/
+.venv/
+venv/
+ENV/
+
+# Playwright
+**/test-results/
+**/playwright-report/
+**/playwright/.cache/
+
+# Git
+.git/
+
+# Scripts
+scripts/Eliza_Installation/pnpm-store/
+scripts/Eliza_Installation/temp/
