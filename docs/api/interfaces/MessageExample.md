@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.5-alpha.3](../index.md) / MessageExample
+[@ai16z/eliza v0.1.5-alpha.5](../index.md) / MessageExample
 
 # Interface: MessageExample
 
@@ -14,7 +14,7 @@ Associated user
 
 #### Defined in
 
-[packages/core/src/types.ts:357](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L357)
+[packages/core/src/types.ts:359](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L359)
 
 ***
 
@@ -26,4 +26,4 @@ Message content
 
 #### Defined in
 
-[packages/core/src/types.ts:360](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L360)
+[packages/core/src/types.ts:362](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L362)

@@ -1,0 +1,31 @@
+{
+  "name": "@ai16z/adapter-postgres-next",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup --format esm --dts",
+    "dev": "tsup --format esm --dts --watch",
+    "lint": "eslint . --fix",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@ai16z/eliza": "workspace:*",
+    "@types/pg": "8.11.10",
+    "pg": "8.13.1",
+    "pg-pool": "^3.6.1",
+    "pg-format": "^1.0.4",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/pg-format": "^1.0.5",
+    "@types/uuid": "^9.0.8",
+    "@vitest/coverage-v8": "^1.4.0",
+    "tsup": "8.3.5",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
+  }
+}

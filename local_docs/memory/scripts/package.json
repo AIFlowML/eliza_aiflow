@@ -1,0 +1,11 @@
+{
+  "name": "@ai16z/memory-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "check": "pnpm -r check"
+  }
+}

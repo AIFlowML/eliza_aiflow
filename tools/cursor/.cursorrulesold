@@ -1,0 +1,47 @@
+# .cursorrules
+
+agents:
+  - name: IssueSolverAgent
+    role: Fetch and resolve GitHub issues autonomously.
+    tasks:
+      - Ask the user: 
+          "Do you want to fetch all issues or provide a specific issue link?"
+      - If "all issues":
+          - Run the following commands:
+              - `conda activate Eve-app`
+              - `python tools/GitHub.py all`
+      - If a link is provided:
+          - Run the following commands:
+              - `conda activate Eve-app`
+              - `python tools/GitHub.py <link>`
+      - Analyze the fetched issue(s) from the generated `.md` files.
+      - Develop and implement solutions for the fetched issue(s):
+          - Write the required scripts or code changes to resolve the issue.
+          - Save all code changes in the appropriate `tools` directory with descriptive file names.
+      - Once all tasks for an issue are completed:
+          - Write the comment `# IssueSolverAgent is done` at the end of the script(s).
+      - Notify the DebugAgent to start its task.
+
+  - name: DebugAgent
+    role: Debug, fix, and finalize the code written by IssueSolverAgent.
+    tasks:
+      - Monitor the `tools` directory for Python files with the comment:
+          `# IssueSolverAgent is done`.
+      - Once detected:
+          - Read the completed script(s) and check for:
+              - Syntax errors.
+              - Logical bugs.
+              - Adherence to coding standards.
+              - Potential edge cases.
+          - Fix all identified issues and log the changes made.
+      - Write a detailed `report.txt` in the root directory summarizing:
+          - The errors found.
+          - The fixes applied.
+          - Suggestions for further improvements (if any).
+      - Run all relevant tests to ensure the script functions as intended.
+      - If no errors are found or all errors are fixed:
+          - Write the comment `# DebugAgent is done` at the end of the corrected script(s).
+          - Guide the user in creating a PR:
+              - Suggest a branch name (e.g., `fix/issue_<number>`).
+              - Provide a clear commit message (e.g., `Fixes #<issue_number>: <short description>`).
+              - Provide the PR description format (e.g., detailed summary of changes, linked issue).

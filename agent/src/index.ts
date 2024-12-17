@@ -25,8 +25,8 @@ import {
     validateCharacterConfig,
 } from "@ai16z/eliza";
 import { zgPlugin } from "@ai16z/plugin-0g";
-import createGoatPlugin from "@ai16z/plugin-goat";
-import { bootstrapPlugin } from "@ai16z/plugin-bootstrap";
+// import createGoatPlugin from "@ai16z/plugin-goat";
+// import { bootstrapPlugin } from "@ai16z/plugin-bootstrap";
 // import { intifacePlugin } from "@ai16z/plugin-intiface";
 import {
     coinbaseCommercePlugin,
@@ -384,9 +384,9 @@ export async function createAgent(
         throw new Error("Invalid TEE configuration");
     }
 
-    const goatPlugin = await createGoatPlugin((secret) =>
-        getSecret(character, secret)
-    );
+    // const goatPlugin = await createGoatPlugin((secret) =>
+    //     getSecret(character, secret)
+    // );
 
     return new AgentRuntime({
         databaseAdapter: db,
@@ -395,7 +395,7 @@ export async function createAgent(
         evaluators: [],
         character,
         plugins: [
-            bootstrapPlugin,
+            // bootstrapPlugin,
             getSecret(character, "CONFLUX_CORE_PRIVATE_KEY")
                 ? confluxPlugin
                 : null,
@@ -436,7 +436,7 @@ export async function createAgent(
             getSecret(character, "COINBASE_NOTIFICATION_URI")
                 ? webhookPlugin
                 : null,
-            getSecret(character, "ALCHEMY_API_KEY") ? goatPlugin : null,
+            //getSecret(character, "ALCHEMY_API_KEY") ? goatPlugin : null,
             getSecret(character, "FLOW_ADDRESS") &&
             getSecret(character, "FLOW_PRIVATE_KEY")
                 ? flowPlugin

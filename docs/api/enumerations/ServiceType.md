@@ -1,4 +1,4 @@
-[@ai16z/eliza v0.1.5-alpha.3](../index.md) / ServiceType
+[@ai16z/eliza v0.1.5-alpha.5](../index.md) / ServiceType
 
 # Enumeration: ServiceType
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1138](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L1138)
+[packages/core/src/types.ts:1151](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1151)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1139](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L1139)
+[packages/core/src/types.ts:1152](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1152)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1140](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L1140)
+[packages/core/src/types.ts:1153](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1153)
 
 ***
 
@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1141](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L1141)
+[packages/core/src/types.ts:1154](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1154)
 
 ***
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1142](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L1142)
+[packages/core/src/types.ts:1155](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1155)
 
 ***
 
@@ -60,7 +60,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1143](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L1143)
+[packages/core/src/types.ts:1156](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1156)
 
 ***
 
@@ -70,14 +70,24 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1144](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L1144)
+[packages/core/src/types.ts:1157](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1157)
 
 ***
 
-### BUTTPLUG
+### INTIFACE
 
-> **BUTTPLUG**: `"buttplug"`
+> **INTIFACE**: `"intiface"`
 
 #### Defined in
 
-[packages/core/src/types.ts:1145](https://github.com/monilpat/eliza/blob/main/packages/core/src/types.ts#L1145)
+[packages/core/src/types.ts:1158](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1158)
+
+***
+
+### AWS\_S3
+
+> **AWS\_S3**: `"aws_s3"`
+
+#### Defined in
+
+[packages/core/src/types.ts:1159](https://github.com/AIFlowML/eliza_aiflow/blob/main/packages/core/src/types.ts#L1159)
