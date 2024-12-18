@@ -11,9 +11,9 @@ const TWEETS_FILE = path.join(__dirname, "tweets.json");
 
 // Direct credentials
 const credentials = {
-    username: "evepredict",
-    password: "Roving4-Avoid0-Revival6-Snide3",
-    email: "ilessio.aimaster@gmail.com"
+    username: "",
+    password: "",
+    email: ""
 };
 
 (async () => {
